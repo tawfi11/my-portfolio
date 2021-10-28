@@ -1,0 +1,3 @@
+SPACE EXPLORATION
+Color palette: Dark blue, black, yellow
+For the battle scene, convert px to %

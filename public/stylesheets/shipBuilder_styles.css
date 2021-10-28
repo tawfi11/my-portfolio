@@ -1,0 +1,89 @@
+body {
+    background-image: url('../Imgs/black-night-space-sky-purple-violet-839896-wallhere.com.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+}
+
+#ship_img {
+    max-height:400px;
+    bottom : 1%;
+    position : absolute;
+    right: 1%;
+}
+
+.transition_explosion { 
+    right : 12% !important;
+    max-height: 600px !important; 
+    bottom : 0% !important;
+}
+
+#selection_bar {
+    top : 5%;
+    margin : auto;
+}
+
+.selection {
+    width: 23%;
+    text-align: center;
+    float : left;
+    position : relative;
+    margin-right: 1%;
+    margin-left : 1%;
+    color: #FFFA6B;
+    font-size: 1.2em;
+}
+
+.selection:hover {
+    box-shadow : 0 0 30px #B300B2;
+}
+
+.item_container{
+    margin:auto;
+    border : 1px solid;
+}
+
+.selected{
+    box-shadow: 0 0 25px #f9cb59;
+    background-color: #B300B2;
+}
+
+.engine_selection_item {
+    width: 100%;
+    border : 5px solid;
+    text-align: center;
+}
+
+#ship {
+    top : 50%;
+    width : 25%;
+}
+
+#hud{
+    background-color: #B300B2;
+    opacity: 0.5;
+    left: 1%;
+    width: 33%;
+    top: 20%;
+    border: 20px solid darkmagenta;
+    position: absolute;
+    display:none;
+}
+
+.hud_item {
+    position : relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left:2%;
+}
+
+.hud_item:hover {
+    box-shadow: 0 0 25px #f9cb59;
+}
+
+.hud_item_img{
+    position: relative;
+    max-height: 175px;
+    width: auto;
+}

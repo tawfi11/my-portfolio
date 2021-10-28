@@ -70,26 +70,8 @@ $(".item").on("click", function(event){
     //console.log(shipImgPath);
     console.log(oldArr);
     console.log(shipImgArr);
+    $("#ship_btn").attr("value", shipImgArr.join(''));
     if(shipImgArr.toString() !== oldArr.toString()){
-        /*$("#ship_img").css("display", "none");
-        let j;
-        for(let i = 1; i <= 7; i++){
-            setTimeout(function(){
-                $("#ship_img").attr("src", `ship/Ship_Effects/Explosion/Explosion_1_00${i}.png`);
-                $("#ship_img").addClass("transition_explosion");
-                $("#ship_img").css("display", "initial");
-            }, (i-1) * 50);
-            j = i;
-        }
-
-        setTimeout(function(){
-            $("#ship_img").attr("src", `${shipImgPath}.png`);
-            ship.engine = shipImgArr[1];
-            ship.cabin = shipImgArr[0];
-            ship.weapon = shipImgArr[2];
-            ship.wing = shipImgArr[3];
-            $("#ship_img").removeClass("transition_explosion");
-        },j * 50);*/
         $("#ship_img").attr("src", `${shipImgPath}.png`);
         ship.engine = shipImgArr[1];
         ship.cabin = shipImgArr[0];

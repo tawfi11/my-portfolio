@@ -7,17 +7,17 @@ body {
 }
 
 #ship_img {
-    max-height:400px;
+    max-height:500%;
     bottom : 1%;
     position : absolute;
     right: 1%;
 }
 
-.transition_explosion { 
+/*.transition_explosion { 
     right : 12% !important;
     max-height: 600px !important; 
     bottom : 0% !important;
-}
+}*/
 
 #selection_bar {
     top : 5%;
@@ -84,6 +84,6 @@ body {
 
 .hud_item_img{
     position: relative;
-    max-height: 175px;
+    max-height: 120%;
     width: auto;
 }

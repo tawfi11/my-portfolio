@@ -53,6 +53,7 @@ $(window).keydown(function(e){
             $(".shot_top").css("left", `${topX + fireSpeed}px`);
             $(".shot_bottom").css("left", `${bottomX + fireSpeed}px`);
 
+
             if($(".shot_top")[0].offsetWidth + speed + $(".shot_top")[0].offsetLeft >= $(window).width() - speed|| 
             $(".shot_bottom")[0].offsetWidth + speed + $(".shot_bottom")[0].offsetLeft >= $(window).width() - speed){
                 clearInterval(shotInterval);

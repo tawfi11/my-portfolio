@@ -93,11 +93,6 @@ $(".item").on("click", function(event){
 })
 
 $(".item").hide();
-let pixelSize = parseInt($("#ship_img").css("max-height").replace("px",""))
-$("#ship_img").css("max-height", `${window.innerHeight * pixelSize/866}px`);
-
-let hud_item_img_px_size = parseInt($(".hud_item_img").css('max-height').replace("px",""));
-$(".hud_item_img").css("max-height", `${window.innerHeight * hud_item_img_px_size / 866}px`)
 
 $("#selection_bar").css("height", $(".selection").css("height"));
 

@@ -1,6 +1,7 @@
 SPACE EXPLORATION
 Color palette: Dark blue, black, yellow
-For the battle scene, convert px to %
+Consider using vw and vh (viewport-width and viewport-height) for responsive web design
+- OR EM
 
 Builder:
 - shootin' stars

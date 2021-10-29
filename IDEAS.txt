@@ -1,3 +1,8 @@
 SPACE EXPLORATION
 Color palette: Dark blue, black, yellow
 For the battle scene, convert px to %
+
+Builder:
+- shootin' stars
+- darkmagenta background color for selection
+- aliens

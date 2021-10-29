@@ -14,7 +14,7 @@ ship.engine = shipImgArr[1];
 ship.cabin = shipImgArr[0];
 ship.weapon = shipImgArr[2];
 ship.wing = shipImgArr[3];
-
+let exhaustIndex = 0;
 $(".selection").click(function(event){
     let target = event.currentTarget.id;
     if(target != old_target){
@@ -77,6 +77,18 @@ $(".item").on("click", function(event){
         ship.cabin = shipImgArr[0];
         ship.weapon = shipImgArr[2];
         ship.wing = shipImgArr[3];
+
+        if(shipImgArr[1] === 1 || shipImgArr[1] === 2){
+            $("#booster_left").css("display", "none");
+            $("#booster_right").css("display", "none")
+            $("#booster_mid").css("display", "initial");
+        }
+        else{
+            $("#booster_left").css("display", "initial");
+            $("#booster_right").css("display", "initial")
+            $("#booster_mid").css("display", "none");
+        }
+
     }
 })
 
@@ -86,3 +98,27 @@ $("#ship_img").css("max-height", `${window.innerHeight * pixelSize/866}px`);
 
 let hud_item_img_px_size = parseInt($(".hud_item_img").css('max-height').replace("px",""));
 $(".hud_item_img").css("max-height", `${window.innerHeight * hud_item_img_px_size / 866}px`)
+
+$("#selection_bar").css("height", $(".selection").css("height"));
+
+let exhaustInterval = setInterval(function(){
+    let engineExhaust = 1;
+    if(ship.engine === 0){
+        engineExhaust = 1;
+    }
+    else if(ship.engine === 1){
+        engineExhaust = 2;
+        $("#booster_mid").css("left","81.95%");
+        $("#booster_mid").css("top","70%");
+    }
+    else if(ship.engine === 2){
+        engineExhaust = 6;
+        $("#booster_mid").css("left","81%");
+        $("#booster_mid").css("top","70%");
+    }
+    $(".exhaust").attr("src", `Imgs/ship/Ship_Effects/Exhaust/Exhaust_${engineExhaust}_00${exhaustIndex}.png`);
+    exhaustIndex += 1;
+    if(exhaustIndex >= 9){
+        exhaustIndex = 0;
+    }
+}, 10);

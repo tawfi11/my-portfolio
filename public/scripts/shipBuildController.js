@@ -103,13 +103,13 @@ let exhaustInterval = setInterval(function(){
     }
     else if(ship.engine === 1){
         engineExhaust = 2;
-        $("#booster_mid").css("left","81.95%");
-        $("#booster_mid").css("top","70%");
+        $("#booster_mid").css("left","84.4vw");
+        $("#booster_mid").css("top","62vh");
     }
     else if(ship.engine === 2){
         engineExhaust = 6;
-        $("#booster_mid").css("left","81%");
-        $("#booster_mid").css("top","70%");
+        $("#booster_mid").css("left","84.2%");
+        $("#booster_mid").css("top","64%");
     }
     $(".exhaust").attr("src", `Imgs/ship/Ship_Effects/Exhaust/Exhaust_${engineExhaust}_00${exhaustIndex}.png`);
     exhaustIndex += 1;

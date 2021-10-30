@@ -17,16 +17,18 @@ body {
 
 #booster_right {
     position: absolute;
-    right: 11.2vw;
+    right: 8.5vw;
     float : left;
-    top: 68vh;
+    top: 61vh;
+    max-height: 30vh;
 }
 
 #booster_left {
     position: absolute;
-    top: 68vh;
+    top: 61vh;
     float : left;
-    left: 80.9vw;
+    left: 83.9vw;
+    max-height: 30vh;
 }
 
 #booster_mid {
@@ -34,11 +36,15 @@ body {
     top : 70vh;
     float : left;
     left : 82.5vw;
+    max-height:40vh;
     display : none;
 }
 
 #selection_bar {
-    top : 5vw;
+    top : 1vh;
+    width: 100vw;
+    left: 0vw;
+    position: absolute;
     margin : auto;
 }
 
@@ -87,7 +93,7 @@ body {
     left: 1vw;
     width: 33vw;
     top: 20vh;
-    border: 20px solid darkmagenta;
+    border: 15px solid darkmagenta;
     position: absolute;
     display:none;
 }
@@ -105,6 +111,6 @@ body {
 
 .hud_item_img{
     position: relative;
-    max-height: 120vh;
+    max-height: 15vh;
     width: auto;
 }

@@ -3,6 +3,14 @@ html {
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     overflow: hidden;
   }
+
+  #head1 {
+      display : none;
+  }
+
+  #head2 {
+      display : none;
+  }
   
   #stars {
     width: 1px;

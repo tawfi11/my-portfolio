@@ -10,7 +10,10 @@ app.get('/', function(req, res){
 })
 
 app.get('/home', function(req,res){
-    res.render("home", {});
+    res.render("parallaxStar", {});
+    setTimeout(function(){
+        res.render("planet", {});
+    }, 2500)
 })
 
 app.post("/", function(req,res){

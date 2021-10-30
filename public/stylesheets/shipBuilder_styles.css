@@ -8,47 +8,47 @@ body {
 }
 
 #ship_img {
-    max-height:50%;
-    top: 14%;
+    max-height:50vh;
+    top: 14vh;
     position : absolute;
     float : left;
-    right: 1%;
+    right: 1vw;
 }
 
 #booster_right {
     position: absolute;
-    right: 11.2%;
+    right: 11.2vw;
     float : left;
-    top: 68%;
+    top: 68vh;
 }
 
 #booster_left {
     position: absolute;
-    top: 68%;
+    top: 68vh;
     float : left;
-    left: 80.9%;
+    left: 80.9vw;
 }
 
 #booster_mid {
     position : absolute;
-    top : 70%;
+    top : 70vh;
     float : left;
-    left : 82.5%;
+    left : 82.5vw;
     display : none;
 }
 
 #selection_bar {
-    top : 5%;
+    top : 5vw;
     margin : auto;
 }
 
 .selection {
-    width: 23%;
+    width: 23vw;
     text-align: center;
     float : left;
     position : relative;
-    margin-right: 1%;
-    margin-left : 1%;
+    margin-right: 1vw;
+    margin-left : 1vw;
     color: #FFFA6B;
     font-size: 1vw;
     background-color: #230245;
@@ -71,22 +71,22 @@ body {
 }
 
 .engine_selection_item {
-    width: 100%;
+    width: 100vw;
     border : 5px solid;
     text-align: center;
 }
 
 #ship {
-    top : 50%;
+    top : 50vh;
     width : 25%;
 }
 
 #hud{
     background-color: #B300B2;
     opacity: 0.5;
-    left: 1%;
-    width: 33%;
-    top: 20%;
+    left: 1vw;
+    width: 33vw;
+    top: 20vh;
     border: 20px solid darkmagenta;
     position: absolute;
     display:none;
@@ -94,9 +94,9 @@ body {
 
 .hud_item {
     position : relative;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left:2%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left:2vw;
 }
 
 .hud_item:hover {
@@ -105,6 +105,6 @@ body {
 
 .hud_item_img{
     position: relative;
-    max-height: 120%;
+    max-height: 120vh;
     width: auto;
 }

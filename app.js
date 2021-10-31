@@ -14,7 +14,7 @@ app.get('/landing', function(req,res){
 })
 
 app.get('/home', function(req,res){
-    res.render('home', {});
+    res.render('about', {});
 })
 
 app.post("/", function(req,res){

@@ -2,18 +2,18 @@ $("#head1").fadeIn(1000);
 $("#head2").fadeIn(2000);
 
 let shadowBox = []
-for(let i = 0; i < 100; i++){
-    shadowBox.push(`${Math.random() * 100}vw ${Math.random() * 100}vh #FFF`)
+for(let i = 0; i < 1000; i++){
+    shadowBox.push(`${Math.random() * 100}vw ${Math.random() * 200}vh #FFF`)
 }
 
 let shadowBox2 = []
-for(let i = 0; i < 50; i++){
-    shadowBox2.push(`${Math.random() * 100}vw ${Math.random() * 100}vh #FFF`)
+for(let i = 0; i < 500; i++){
+    shadowBox2.push(`${Math.random() * 100}vw ${Math.random() * 200}vh #FFF`)
 }
 
 let shadowBox3 = []
-for(let i = 0; i < 50; i++){
-    shadowBox3.push(`${Math.random() * 100}vw ${Math.random() * 100}vh #FFF`)
+for(let i = 0; i < 100; i++){
+    shadowBox3.push(`${Math.random() * 100}vw ${Math.random() * 200}vh #FFF`)
 }
 
 let boxShadow = shadowBox.join(' , ');
@@ -28,3 +28,7 @@ $("#stars3").css("box-shadow", boxShadow)
 window.scrollTo({
     top: 0
 });
+
+$(window).keypress(function(event){
+    window.location.replace('/home');
+})

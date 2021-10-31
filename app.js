@@ -9,20 +9,16 @@ app.get('/', function(req, res){
     res.render("ship_builder", {})
 })
 
-app.get('/home', function(req,res){
+app.get('/landing', function(req,res){
     res.render("parallaxStar", {});
-    setTimeout(function(){
-        res.render("planet", {});
-    }, 2500)
+})
+
+app.get('/home', function(req,res){
+    res.render('home', {});
 })
 
 app.post("/", function(req,res){
-    //const shipParts = req.body.ship;
     console.log(req.body);
-})
-
-app.get('/planet', function(req,res){
-    res.render("planet", {})
 })
 
 app.get('/battle', function(req,res){

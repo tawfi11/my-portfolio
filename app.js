@@ -10,7 +10,7 @@ app.get('/', function(req, res){
 })
 
 app.get('/landing', function(req,res){
-    res.render("parallaxStar", {});
+    res.render("landing", {});
 })
 
 app.get('/home', function(req,res){

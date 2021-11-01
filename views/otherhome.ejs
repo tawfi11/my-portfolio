@@ -11,10 +11,52 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="stylesheets/otherhome.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
+        <svg id="fader"></svg>
+        <script>
+            fadeInPage();
+            function fadeInPage() {
+                if(!window.AnimationEvent){
+                    return;
+                }
+                let fader = document.getElementById("fader");
+                fader.classList.add('fade-out');
+            }
+        </script>
+
+        <div id="twinkling_stars">
+            <div class='stars'></div>
+            <div class='twinkling'></div>
+        </div>
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+
         <div class="inner"></div>
-        <img id="jupiter" src="Imgs/jupiterold.png">   
-        <script src="" async defer></script>
+
+        <div>
+            <img id="venus" src="Imgs/venus.jpg">
+        </div>
+
+        <div>
+            <img id="earth" src="Imgs/earth.jpg">
+        </div>
+
+
+        <div>
+            <a href="/about">
+                <img id="jupiter" src="Imgs/jupiter.png">
+            </a>
+        </div>
+
+        <div>
+            <a href="/about">
+                <img id="saturn" src="Imgs/saturn.jpg">
+            </a>
+        </div>
+        
+        <script src="scripts/otherhome.js" async defer></script>
     </body>
 </html>

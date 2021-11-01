@@ -14,7 +14,7 @@ app.get('/landing', function(req,res){
 })
 
 app.get('/home', function(req,res){
-    res.render('home', {});
+    res.render('otherhome', {});
 })
 
 app.get('/about', function(req,res){

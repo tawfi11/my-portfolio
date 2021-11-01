@@ -25,3 +25,4 @@ $("#stars3").css("box-shadow", boxShadow)
 window.scrollTo({
     top: 0
 });
+

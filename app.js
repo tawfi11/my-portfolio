@@ -6,10 +6,6 @@ app.use(express.static("public"));
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res){
-    res.render("ship_builder", {})
-})
-
-app.get('/landing', function(req,res){
     res.render("landing", {});
 })
 
@@ -21,12 +17,8 @@ app.get('/professional', function(req,res){
     res.render('profexp', {})
 })
 
-app.post("/", function(req,res){
-    console.log(req.body);
-})
-
-app.get('/battle', function(req,res){
-    res.render("ship_battle", {})
+app.get('/about', function(req, res){
+    res.render('about', {});
 })
 
 const port = process.env.PORT || 3000;

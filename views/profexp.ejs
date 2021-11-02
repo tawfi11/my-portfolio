@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheets/profexp.css">
+        <link rel="stylesheet" href="stylesheets/shooting_star.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <svg id="fader"></svg>
+        <script>
+            fadeInPage();
+            function fadeInPage() {
+                if(!window.AnimationEvent){
+                    return;
+                }
+                let fader = document.getElementById("fader");
+                fader.classList.add('fade-out');
+            }
+        </script>
+
+        <!--div class="night">
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+            <div class="shooting_star"></div>
+          </div-->
+        <div id="twinkling_stars">
+            <div class='stars'></div>
+            <div class='twinkling'></div>
+        </div>
+
+        <div>
+            <img src="Imgs/planets/jupiterold.png" id="jupiter">
+        </div>
+        
+        <div>
+            <img src="Imgs/stardestroyer.jpg" id="destroyer">
+        </div>
+        
+        <div id="textbox">
+            <div class="entry" id="intel">
+                <img class="logo" src="Imgs/logos/intellogo.jpg">
+                <div class="companyTitleBox">
+                    <h1>Intel Corporation</h1>
+                </div>
+                <div class="clearfix"></div>
+                <div class="positionBox">
+                    <h2><i><b>Power Efficiency Engineering Intern</b></i></h2>
+                    <h3><b>Jan 2021 - Aug 2021</b></h3>
+                </div>
+                <div class="infobox">
+                    <ul>
+                        <li>Created and trained a TensorFlow dense neural network regression model to calculate data leakage power
+                            with over 75% accuracy given cell counts and areas as inputs.
+                        </li>
+                        <br>
+                        <li>
+                            Utilized Apache’s PySpark Machine Learning to create and train a linear regression model pipeline 
+                            that calculates leakage power given cell counts and areas as inputs with over 70% accuracy.
+                        </li>
+                        <br>
+                        <li>
+                            Debugged SV module using Ansys PowerArtist to reduce number of unknown nets from 100,000+ to ~1000
+                        </li>
+                        <br>
+                        <li>
+                            Solved critical timing errors and ran analysis tests on verilog modules
+                        </li>
+                    </ul>
+                </div>              
+            </div> 
+        </div>
+        <div id="selection">
+            <h1> HEY HEY HEY</h1>>
+        </div>
+        
+        <script src="scripts/profexp.js" async defer></script>
+    </body>
+</html>

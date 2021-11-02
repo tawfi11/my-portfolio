@@ -17,8 +17,8 @@ app.get('/home', function(req,res){
     res.render('otherhome', {});
 })
 
-app.get('/about', function(req,res){
-    res.render('about', {})
+app.get('/professional', function(req,res){
+    res.render('profexp', {})
 })
 
 app.post("/", function(req,res){

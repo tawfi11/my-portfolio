@@ -1,15 +1,30 @@
 let shadowBox = []
-for(let i = 0; i < 1000; i++){
+let star = 1000, star2 = 500, star3 = 100;
+
+if($(window).width() < $(window).height()){
+    star /= 4;
+    star2 = 0;
+    star3  = 0;
+    let planetsArr = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'];
+    let planetSize = [1.5, 2, 4, 2, 30, 4.5, 6, 3];
+    let i = 0;
+    planetsArr.forEach(function(planet){
+        $(`#${planet}`).css('width', (planetSize[i] + 1) * $(window).height() / 100);
+        i+=1;
+    })
+}
+
+for(let i = 0; i < star; i++){
     shadowBox.push(`${Math.random() * 100}vw ${Math.random() * 200}vh #FFF`)
 }
 
 let shadowBox2 = []
-for(let i = 0; i < 500; i++){
+for(let i = 0; i < star2; i++){
     shadowBox2.push(`${Math.random() * 100}vw ${Math.random() * 200}vh #FFF`)
 }
 
 let shadowBox3 = []
-for(let i = 0; i < 100; i++){
+for(let i = 0; i < star3; i++){
     shadowBox3.push(`${Math.random() * 100}vw ${Math.random() * 200}vh #FFF`)
 }
 

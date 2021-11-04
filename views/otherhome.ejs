@@ -8,10 +8,16 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
+        
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         <link rel="stylesheet" href="stylesheets/otherhome.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
     <body>
         <svg id="fader"></svg>
@@ -72,6 +78,26 @@
             <img id="neptune" class="planet" src="Imgs/planets/neptune.png">
         </div>
         
+        <nav class="navbar navbar-dark">
+            <a class="navbar-brand" href="/home">Nusair Islam</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav" style="background:black;width:fit-content;">
+                <li class="nav-item">
+                  <a class="nav-link" href="/home" style="color:white !important;">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about">ABOUT ME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/professional">PROFESSIONAL EXPERIENCE</a>
+                </li>    
+              </ul>
+            </div>  
+          </nav>
+
         <script src="scripts/otherhome.js" async defer></script>
     </body>
 </html>

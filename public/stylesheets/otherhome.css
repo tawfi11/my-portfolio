@@ -70,7 +70,7 @@ body {
 
 #mercury {
   position : absolute;
-  width :1vw;
+  width :1.5vw;
   top : 55vh;
   left : 48vw;
   filter : drop-shadow(0 0 8px black);
@@ -79,7 +79,7 @@ body {
 
 #venus {
   position : absolute;
-  width : 1.7vw;
+  width : 2vw;
   top : 40vh;
   left : 59vw;
 }
@@ -95,7 +95,7 @@ body {
 
 #mars {
   position : absolute;
-  width: 1vw;
+  width: 2vw;
   top : 45vh;
   left : 35vw;
   transform : rotate(140deg);

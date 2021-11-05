@@ -1,6 +1,18 @@
+@font-face {
+  font-family: 'Andromeda';
+  src: url('../Fonts/Andromeda-eR2n.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "Brave81";
+  src: url('../Fonts/Outerorbit-rggRL.ttf') format('truetype'); /* Safari, Android, iOS*/
+}
+
+
 body, html {
     height : 100%;
     background-color : black;
+    font-family: "Brave81";
 }
 
 hr {

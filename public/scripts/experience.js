@@ -1,32 +1,62 @@
-let jobList = ["me", "ansys", "robotics", "intel", "ubc", "rocsol", "orbit"];
-function fixStuff(){
-    let logoWidth = parseFloat($(".logo").css("width"));
+let jobList = ["me", "ansys", "intel", "ubc", "rocsol"];
+let imageHeight = $(".logo")[0].clientHeight
+function fixStuff(i){
+    let j = ((i - 1) >= 0) ? i - 1 : 0;
+    let logoWidth = parseFloat($($($(".logo")[j])[0]).css("width"));
     let textWidth = $(window).width() - logoWidth - 30;
-    $(".textBox").css("width", textWidth);
-    let logoHeight = $(".logo").outerHeight();
-    let textHeight = $(".textBox").outerHeight();
-    if(logoHeight >= textHeight){
-        $(".job").css("height", parseFloat($(".logo").css("height")) + 20)
+    $(`#${jobList[i]}_textBox`).css("width", textWidth);
+    let logoHeight =  parseFloat($($($(".logo")[j])[0]).css("height"));
+    let textHeight = $(`#${jobList[i]}_textBox`).outerHeight();
+    console.log(logoHeight >= textHeight);
+    /*if(logoHeight >= textHeight){
+        $(".job").css("height", logoHeight + 20)
     }
     else {
-        $(".job").css("height", parseFloat($(".textBox").css("height")) + 40)
-    }
+        $(".job").css("height", textHeight + 30)
+    }*/
+    $(".job").css("height", logoHeight + 30)
 }
-
+let checkScroll = true;
 function switchJob(oldIndex, i){
-    let colors = ["rgb(137, 20, 184)", "rgb(255,183,27)", "rgb(189,4,3)", "rgb(0,105,183)", "rgb(210,178,44)", "rgb(7,99,36)", "rgb(199,233,231)"];
-    $(`#${jobList[oldIndex]}_job`).fadeOut();
-     $(`#${jobList[i]}_job`).fadeIn("slow");
-     $(".outer-circle").css("background", "black");
-    $($(".outer-circle")[i]).css("background-color", colors[i]);
-    $(".outer-circle").css("box-shadow", "0 0 0 0 transparent");
-    $($(".outer-circle")[i]).css("box-shadow", `0 0 12px 7px ${colors[i]}`);
-    $(".outer-circle").css("border-color", "rgb(70, 70, 70)");
-    $($(".outer-circle")[i]).css("border-color", "black");
+    $("#downArrow").css("display", "none");
+    $("#upArrow").css("display", "none");
+    $(`#${jobList[oldIndex]}_job`).fadeOut(300, "swing");
+     $(`#${jobList[i]}_job`).fadeIn(300, "swing");
+     let direction = (i > oldIndex) ? -1 : 1;
+     console.log(jobList[i])
+
+     if(direction === -1){
+        $(`#${jobList[i]}_job`).css("position", "absolute");
+        $(`#${jobList[i]}_job`).css("top", $(window).height());
+     } else { 
+        $(`#${jobList[i]}_job`).css("top", -imageHeight);
+        $(`#${jobList[i]}_job`).css("position", "absolute");
+     }
+     let oldPos = parseFloat(  $(`#${jobList[i]}_job`).css("top"))
+    
+     let interval = setInterval(function(){
+        let current = $(`#${jobList[i]}_job`), old = $(`#${jobList[oldIndex]}_job`);
+        let speed = 4 * parseFloat(current.css("top")) / oldPos;
+        speed = 4
+        current.css("top", parseInt(current.css("top")) + (direction * speed));
+        old.css("top", parseInt(old.css("top")) + (direction * speed));
+        if((parseFloat(current.css("top")) <= $(window).height() / 4 && direction == -1) || ((parseFloat(current.css("top")) >= $(window).height() / 4 && direction == 1))){
+            checkScroll = true;
+            if(i < jobList.length - 1){
+                $("#downArrow").css("display", "initial");
+            }
+            if(i > 0){
+                $("#upArrow").css("display", "initial");
+            }
+            clearInterval(interval);
+        }
+    }, 1)
+    if(i > 0)
+        fixStuff(i);
 }
 
 if($(window).width() > $(window).height()){
-    fixStuff();
+    $("html").css("overflow", "hidden");
     $(".job").css({"display" : "none", "top" : "25vh", "position" : "absolute"});
     $(".parallaxHalf").remove();
     $(".parallax").remove();
@@ -39,14 +69,12 @@ if($(window).width() > $(window).height()){
         "background-size": "cover"
     });
     let i = 0;
+    $("#me_job").css("height", imageHeight);
     $(`#${jobList[i]}_job`).css({
         "display" : "initial", 
         "top": "25vh",
-        "position" : "absolute"});
-    fixStuff();
+        "position" : "absolute"});    
     
-    let checkScroll = true;
-    setInterval(function(){checkScroll = true}, 1000);
     $(window).bind('mousewheel DOMMouseScroll', function(event){
         if(checkScroll){
             let oldIndex = i;
@@ -73,40 +101,45 @@ if($(window).width() > $(window).height()){
     558
 
     document.onkeydown = function(e) {
-        let oldIndex = i;
-        switch(e.which) {
-            case 37: // left
-                if(i > 0){
-                    i -= 1;
-                }
-                
-            break;
+        if(checkScroll){
+            let oldIndex = i;
+            switch(e.which) {
+                case 37: // left
+                    if(i > 0){
+                        i -= 1;
+                    }
+                    
+                break;
 
-            case 40: // down
-                if(i < jobList.length - 1){
-                    i += 1;
-                }
-            break;
+                case 40: // down
+                    if(i < jobList.length - 1){
+                        i += 1;
+                    }
+                break;
 
-            case 39: // right
-                if(i < jobList.length - 1){
-                    i += 1;
-                }
-            break;
+                case 39: // right
+                    if(i < jobList.length - 1){
+                        i += 1;
+                    }
+                break;
 
-            case 38: // up
-                if(i > 0){
-                    i -= 1;
-                }
-            break;
+                case 38: // up
+                    if(i > 0){
+                        i -= 1;
+                    }
+                break;
 
-            default: return; // exit this handler for other keys
+                default: return; // exit this handler for other keys
+            }
+            console.log(e.which);
+            e.preventDefault(); // prevent the default action (scroll / move caret)
+            if(oldIndex !== i){
+                switchJob(oldIndex, i);
+                checkScroll = false;
+            }
+            
         }
-        console.log(e.which);
-        e.preventDefault(); // prevent the default action (scroll / move caret)
-        if(oldIndex !== i){
-            switchJob(oldIndex, i);
-        }
+        
     };
 
     $(".outer-circle").click(function(e){
@@ -116,10 +149,25 @@ if($(window).width() > $(window).height()){
             switchJob(oldIndex, i);
         }
     })
+
+    $("#downArrow").click(function(e){
+        i += 1;
+        switchJob(i-1, i);
+    })
+
+    $("#upArrow").click(function(e){
+        i -= 1;
+        switchJob(i+1, i);
+    })
     
 }
 else {
+    $(".nav-item").css("margin-left","");
+    $("#me_textBox").css({"left":"0vw", "top" : "5vh", "font-size": "12px"});
+    $("#me_jobh1").remove();
     $("#progress").remove();
+    $(".job").css("border-radius", "0")
+    $("#downArrow").remove();
     $("#desktopTutorial").remove();
     jobList.forEach(function(job){
         let jobHeight = $(`#${job}_textBox`).offset().top + $(`#${job}_textBox`).outerHeight() - $(`#${job}_job`).offset().top;
@@ -127,3 +175,52 @@ else {
     })
     
 }
+
+let numberOfDirs = 0;
+let arrowMovement = 1;
+reverse = true;
+let downArrInterval = setInterval(function(){
+    $("#downArrow").css("top", parseFloat( $("#downArrow").css("top")) + arrowMovement);
+    $("#upArrow").css("top", parseFloat( $("#upArrow").css("top")) - arrowMovement);
+    numberOfDirs++;
+    if(numberOfDirs >= 8){
+        if(reverse){
+            arrowMovement = -2;
+            numberOfDirs = 4;
+            reverse = false;
+        }
+        else {
+            arrowMovement = 1;
+            numberOfDirs = 0;
+            reverse = true;
+        }
+        
+    }
+
+}, 100);
+
+let star = 1000, star2 = 500, star3 = 100;
+
+let shadowBox=[]
+for(let i = 0; i < star; i++){
+    shadowBox.push(`${Math.random() * 100}vw ${Math.random() * 200}vh #FFF`)
+}
+
+let shadowBox2 = []
+for(let i = 0; i < star2; i++){
+    shadowBox2.push(`${Math.random() * 100}vw ${Math.random() * 200}vh #FFF`)
+}
+
+let shadowBox3 = []
+for(let i = 0; i < star3; i++){
+    shadowBox3.push(`${Math.random() * 100}vw ${Math.random() * 200}vh #FFF`)
+}
+
+let boxShadow = shadowBox.join(' , ');
+$("#stars").css("box-shadow", boxShadow);
+
+boxShadow = shadowBox2.join(' , ');
+$("#stars2").css("box-shadow", boxShadow)
+
+boxShadow = shadowBox3.join(' , ');
+$("#stars3").css("box-shadow", boxShadow)

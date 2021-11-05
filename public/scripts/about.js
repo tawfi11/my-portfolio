@@ -15,3 +15,7 @@ setInterval(function(){
         i = 0;
     }
 }, 8000);
+
+if($(window).height() > $(window).width()){
+    $(".nav-item").css("margin-left","");
+}

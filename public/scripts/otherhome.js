@@ -11,6 +11,9 @@ if($(window).width() < $(window).height()){
     planetsArr.forEach(function(planet){
         $(`#${planet}`).css('width', (planetSize[i] + 1) * $(window).height() / 100);
         i+=1;
+        
+        $(".nav-item").css("margin-left","");
+        
     })
 }
 
@@ -41,3 +44,14 @@ window.scrollTo({
     top: 0
 });
 
+$($(".nav-item")[2]).hover(function(){
+    $("#jupiter").css("filter", "drop-shadow(0px 0px 30px white)");
+}, function(){
+    $("#jupiter").css("filter", "");
+})
+
+$($(".nav-item")[1]).hover(function(){
+    $("#earth").css("filter", "drop-shadow(0px 0px 30px white)");
+}, function(){
+    $("#earth").css("filter", "");
+})

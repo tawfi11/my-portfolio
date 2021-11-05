@@ -1,3 +1,29 @@
+body {
+    background: black !important;
+    font-family: "lato", sans-serif !important;
+    color : rgb(255, 255, 255);
+    width : 100% !important;
+}
+
+.earth {
+    background-image: url("../Imgs/planets/earth.png");
+    /* Full height */
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position : relative;
+    top : 50vh;
+    left : -20vw;
+}
+
+#me {
+    position : absolute;
+    width : 10%;
+    top : 20vh;
+    left : 50vw;
+    border-radius : 50px;
+}
+
 #fader {
     position : fixed;
     top : 0;
@@ -31,28 +57,5 @@
     animation-name: fade-in;
 }
 
-body {
-    background: black;
-    overflow : hidden;
-    font-family: "lato", sans-serif;
-    color : rgb(255, 255, 255);
-}
 
-#earth {
-    position : absolute;
-    top : 30em;
-}
 
-#me {
-    position : absolute;
-    max-height : 35vh;
-    max-width : 35vw;
-    left : 20vw;
-    top : 10vh;
-    border-radius:30px;
-    float : left;
-}
-
-#aboutBox {
-    float: left;
-}

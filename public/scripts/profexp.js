@@ -21,6 +21,10 @@ let starDestroyerInterval = setInterval(function(){
 
     starDestroyer.css("left", posX + 5);
     starDestroyer.css("top", posY + 1);
+    if(parseInt(starDestroyer.css('left')) >= $(window).width()){
+        clearInterval(starDestroyerInterval);
+        starDestroyer.remove();
+    }
 }, 10)
 
 $(".companyTitleBox").css("height", $(".logo").css("height"))

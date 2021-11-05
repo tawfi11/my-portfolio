@@ -3,6 +3,7 @@ body {
   width:100%;
   /*margin:60px auto;*/
   overflow : hidden;
+  font-family: "lato", sans-serif !important;
 }
 
 @-webkit-keyframes pulse {
@@ -65,7 +66,7 @@ body {
 }
 
 .planet:hover{
-  filter: drop-shadow(0px 0px 4px white);
+  filter: drop-shadow(0px 0px 30px white);
 }
 
 #mercury {

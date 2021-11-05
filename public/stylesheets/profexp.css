@@ -35,17 +35,18 @@ html {
     height: 100%;
     /*background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);*/
     background:black;
-    overflow : hidden;
     font-family: "lato", sans-serif;
     color : rgb(255, 255, 255);
+    /*overflow-x : hidden;*/
 }
 
-h1 {
+
+/*h1 {
   letter-spacing: 4px;
   font-size : 2.5vw;
   color : rgba(0, 0, 0, 0.452);
   color : white;
-  /*text-shadow: 0 0 1px rgb(2, 145, 255);*/
+  /*text-shadow: 0 0 1px rgb(2, 145, 255);
 }
 
 h2 {
@@ -70,7 +71,7 @@ li {
   text-shadow: 0 0 1px white;
   font-size : 1.2vw;
   letter-spacing: 1px;
-}
+}*/
 
 #jupiter {
     position: absolute;
@@ -79,6 +80,16 @@ li {
     top : 50vh;
     right : -30vw;
     /*filter: drop-shadow(0 -1px 500px #776C62);*/
+    position : fixed;
+}
+
+#parallax {
+    background-image : url("../Imgs/planets/jupiter.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height : 100%;
 }
 
 #destroyer {

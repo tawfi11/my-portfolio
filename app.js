@@ -14,7 +14,7 @@ app.get('/home', function(req,res){
 })
 
 app.get('/professional', function(req,res){
-    res.render('profexp', {})
+    res.render('experience', {})
 })
 
 app.get('/about', function(req, res){

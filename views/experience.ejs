@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheets/experience.css">
+        <link rel="stylesheet" href="stylesheets/shooting_star.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <svg id="fader"></svg>
+        <script>
+            fadeInPage();
+            function fadeInPage() {
+                if(!window.AnimationEvent){
+                    return;
+                }
+                let fader = document.getElementById("fader");
+                fader.classList.add('fade-out');
+            }
+        </script>
+          
+        <div id="progress" style="position : absolute; top : 18vh;">
+            <div class="outer-circle" style="background-color:rgb(137, 20, 184);box-shadow: 0 0 12px 7px rgb(137, 20, 184);border-color:black" id="0"></div>
+            <div class="outer-circle" id="1"></div>
+            <div class="outer-circle" id="2"></div>
+            <div class="outer-circle" id="3"></div>
+            <div class="outer-circle" id="4"></div>
+            <div class="outer-circle" id="5"></div>
+            <div class="outer-circle" id="6"></div>
+        </div>
+        <div class="parallax"></div>
+        
+        <div>
+
+        </div>
+
+        <div class="job" id="me_job" style="border: 3px solid rgb(137, 20, 184);">
+            
+            <div class="textBox" id="me_textBox">
+                <h1 class="jobh1" style="color:rgb(137, 20, 184);">Welcome to my <i>resume</i> section</h1>
+                <h2 class="jobh2">Please feel free to <a href="^ Nusair Islam MASTER Resume.docx" download><u>download a PDF of my resume</u></a></h2>
+                <h3 class="jobh3" style="color:rgb(137, 20, 184);"><b><i>Or, scroll down to see my professional experiences</i></b></h3>
+                <div id="desktopTutorial">
+                    <p>To scroll through my professional experiences: </p>
+                    <ul class="jobul">
+                       <li>Scroll <i>up</i> and <i>down</i></li>
+                        <li>Hit <i>right/left</i> or <i>up/down</i> key</li>
+                        <li><i>Click</i> the progress circles up above</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="parallaxHalf"></div>
+
+        <div class="job" id="ansys_job" style="border: 3px solid rgb(255,183,27);">
+            <img class="logo" src="Imgs/logos/ansyslogo.png">
+            <div class="textBox" id="ansys_textBox">
+                <h1 class="jobh1" style="color:rgb(255,183,27);">Ansys</h1>
+                <h2 class="jobh2">Electronics R&D - 3D Gui Intern</h2>
+                <h3 class="jobh3" style="color:rgb(255,183,27);"><b><i>Aug 2021 - PRESENT</i></b></h3>
+                <ul class="jobul">
+                    <li>Implemented compatability with latest MATLAB/Simulink version and desktop software using C++</li>
+                    <li>Modeled four complicated 2D/3D toroid structures on CAD and ran eddy current analysis using defined excitations and calculated resultant torque</li>
+                    <li>Eliminated 95% of build warnings and errors in Maxwell EDT Software in C++</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="parallaxHalf"></div>
+
+        <div class="job" id="robotics_job" style="border: 3px solid rgb(189,4,3);">
+            <img class="logo" src="Imgs/logos/openroboticslogo.png">
+            <div class="textBox" id="robotics_textBox">
+                <h1 class="jobh1" style="color:rgb(189,4,3);">UBC Open Robotics</h1>
+                <h2 class="jobh2">Electrical Sub-Team Home Bot</h2>
+                <h3 class="jobh3" style="color:rgb(189,4,3);"><b><i>Sept 2021 - PRESENT</i></b></h3>
+                <ul class="jobul">
+                    <li>Designed, built, and tested force-sensitive resistor Arduino circuit to be used as a force-meter on robotic claw</li>
+                    <li>Analyzed capacitor placement in robot claw circuit, mathematically chose best capacitance values for capacitors in the circuit</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="parallaxHalf"></div>
+
+        <div class="job" style="border: 3px solid rgb(0,105,183);" id="intel_job">
+            <img class="logo" src="Imgs/logos/intellogo.png">
+            <div class="textBox" id="intel_textBox">
+                <h1 class="jobh1" style="color:rgb(0,105,183);">Intel Corporation</h1>
+                <h2 class="jobh2">Power Efficiency Engineering Intern</h2>
+                <h3 class="jobh3" style="color:rgb(0,105,183);"><b><i>Jan 2021 - Aug 2021</i></b></h3>
+                <ul class="jobul">
+                    <li>Created and trained a TensorFlow dense neural network regression model to calculate data leakage power with over 75% accuracy given cell counts and areas as inputs</li>
+                    <li>Utilized Apache’s PySpark Machine Learning to create and train a linear regression model pipeline that calculates leakage power given cell counts and areas as inputs with over 70% accuracy</li>
+                    <li>Debugged SV module using Ansys PowerArtist to reduce number of unknown nets from 100,000+ to ~1000</li>
+                    <li>Solved critical timing errors and ran analysis tests on verilog modules</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="parallaxHalf"></div>
+
+        <div class="job" style="border: 3px solid rgb(210,178,44);" id="ubc_job">
+            <img class="logo" src="Imgs/logos/ubclogo.png">
+            <div class="textBox" id="ubc_textBox">
+                <h1 class="jobh1" style="color:rgb(210,178,44);">University of British Columbia</h1>
+                <h2 class="jobh2">APSC 160 Teaching Assistant</h2>
+                <h3 class="jobh3" style="color:rgb(210,178,44);"><b><i>Sept 2020 - April 2021</i></b></h3>
+                <ul class="jobul">
+                    <li>Ran office hours and mentored over 100 students on the basic principles of programming, and software engineering in C</li>
+                    <li>Created presentations for over 200 students on topics such as stack memory theory, variable memory allocation, heap and stack memory, binary trees, sorting, data structures, and runtime optimization in C</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="parallaxHalf"></div>
+
+        <div class="job" style="border: 3px solid rgb(7,99,36);" id="rocsol_job">
+            <img class="logo" src="Imgs/logos/rocsollogo.png">
+            <div class="textBox" id="rocsol_textBox">
+                <h1 class="jobh1" style="color:rgb(7,99,36);">Rocsol Tech</h1>
+                <h2 class="jobh2">Software Engineering Intern</h2>
+                <h3 class="jobh3" style="color:rgb(7,99,36);"><b><i>May 2020 - Sept 2020</i></b></h3>
+                <ul class="jobul">
+                    <li>Created integral application in C# to utilize user inpt data and generate a dynamic diagram showcasing the output of the program in a visualize manner</li>
+                    <li>Created animation in C# to read output data from DWOB software and generate a dynamic animation showcasing the path of the drill bit inside the wall and the rock fracture points</li>
+                    <li>Debugged over 100 critical build errors in DWOB software</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="parallaxHalf"></div>
+
+        <div class="job" style="border: 3px solid rgb(199,233,231);" id="orbit_job">
+            <img class="logo" src="Imgs/logos/ubcorbitlogo.png">
+            <div class="textBox" id="orbit_textBox">
+                <h1 class="jobh1" style="color:rgb(199,233,231);">UBC Orbit</h1>
+                <h2 class="jobh2">Structure Sub-Team Alea SAT</h2>
+                <h3 class="jobh3" style="color:rgb(199,233,231);"><b><i>Sept 2018 - April 2020</i></b></h3>
+                <ul class="jobul">
+                    <li>Created python script to convert irradiance values of CSV file into temperature data and used the data to perform Ansys thermal simulations</li>
+                    <li>Overhauled casing design of sattelite on SolidWorks so internal compartments may be more efficiently accessed</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="parallax"></div>
+
+        <nav class="navbar navbar-dark" style="top:0px;position:fixed;width:100%;background-color:black;">
+            <a class="navbar-brand" href="/home" style="font-weight:bold;"><i>Nusair Islam</i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav" style="background:black;width:fit-content;">
+                <li class="nav-item">
+                  <a class="nav-link" href="/home">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about">ABOUT ME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/professional" style="color:yellow !important;">PROFESSIONAL EXPERIENCE</a>
+                </li>    
+              </ul>
+            </div>  
+          </nav>
+
+        <script src="scripts/experience.js" async defer></script>
+    </body>
+</html>

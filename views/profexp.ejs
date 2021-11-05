@@ -54,107 +54,39 @@
             <div class="shooting_star"></div>
             <div class="shooting_star"></div>
           </div-->
-        <div id="twinkling_stars">
+
+        
+
+        <!--div id="twinkling_stars" style="z-index:-10;float:left;">
             <div class='stars'></div>
             <div class='twinkling'></div>
-        </div>
+        </div-->
 
-        <div>
-            <img src="Imgs/planets/jupiterold.png" id="jupiter">
-        </div>
-        
-        <div>
-            <img src="Imgs/stardestroyer.jpg" id="destroyer">
-        </div>
-        
-        <div id="textbox">
-            <div class="entry" id="intel">
-                <img class="logo" src="Imgs/logos/ansyslogo.png">
-                <div class="companyTitleBox">
-                    <h1>Ansys Ltd.</h1>
-                </div>
-                <div class="clearfix"></div>
-                <div class="positionBox">
-                    <h2><i><b>Electronics R&D - 3D Gui</b></i></h2>
-                    <h3><b>Aug 2021 - PRESENT</b></h3>
-                </div>
-                <div class="infobox">
-                    <ul class="infoList">
-                        <li>Implemented compatability with latest MATLAB/Simulink version and desktop software using C++</li><br>
-                        <li>Modeled four complicated 2D/3D toroid structures on CAD and ran eddy current analysis using defined excitations and calculated resultant torque</li><br>
-                        <li>Eliminated 95% of build warnings and errors in Maxwell EDT Software in C++</li>
-                    </ul>
-                </div>              
-            </div> 
-        </div>
-        <div id="selection">
-            <form>
-                <input id="a" type="radio" name="hopping" value="0" checked onclick="buttonChange(this, false)">
-                <label for="a"><span></span>Ansys Ltd.</label>
-                <input id="b" type="radio" name="hopping" value="1" onclick="buttonChange(this, false)">
-                <label for="b"><span></span>UBC Open Robotics</label>
-                <input id="c" type="radio" name="hopping" value="2" onclick="buttonChange(this, false)">
-                <label for="c"><span></span>Intel Corporation</label>
-                <input id="d" type="radio" name="hopping" value="3" onclick="buttonChange(this, false)">
-                <label for="d"><span></span>University of British Columbia</label>
-                <input id="e" type="radio" name="hopping" value="4" onclick="buttonChange(this, false)">
-                <label for="e"><span></span>Rocsol Technologies</label>
-                <input id="f" type="radio" name="hopping" value="5" onclick="buttonChange(this, false)">
-                <label for="f"><span></span>UBC Orbit</label>
-                <div class="worm">
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                    <div class="worm__segment"></div>
-                </div>
-            </form>
-            
-        </div>
-        <nav class="navbar navbar-dark">
-            <a class="navbar-brand" href="/home">Nusair Islam</a>
+        <div id="parallax" style="float:left;background-image:url('../Imgs/planets/jupiter.png');z-index:-1;height:100%;top:0px;"></div>
+
+
+        <nav class="navbar navbar-dark" style="top:0px;position:sticky;z-index:10;">
+            <a class="navbar-brand" href="/home" style="font-weight:bold;"><i>Nusair Islam</i></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
               <ul class="navbar-nav" style="background:black;width:fit-content;">
                 <li class="nav-item">
-                  <a class="nav-link" href="/home" style="color:white !important;">HOME</a>
+                  <a class="nav-link" href="/home">HOME</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="/about">ABOUT ME</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/professional">PROFESSIONAL EXPERIENCE</a>
+                  <a class="nav-link" href="/professional" style="color:yellow !important;">PROFESSIONAL EXPERIENCE</a>
                 </li>    
               </ul>
             </div>  
           </nav>
+
+
+                
         <script src="scripts/profexp.js" async defer></script>
     </body>
 </html>

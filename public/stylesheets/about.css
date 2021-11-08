@@ -11,7 +11,7 @@
 
 body {
     background: black !important;
-    font-family: "lato", sans-serif !important;
+    font-family: 'Courier New', monospace !important;
     color : rgb(255, 255, 255);
     width : 100% !important;
     height : 100% !important;
@@ -32,15 +32,25 @@ body {
     display : inline-block;
 }
 
-.aboutMeHeading {
+.aboutMeHeadingContainer {
   position : absolute;
-  height : 100%;
   width : 100%;
   top : 20%;
-  left : 50%;
-  color : white;
+  left : 0%;
+  text-align: center;
 }
 
+.aboutMeHeading {
+  font-weight : bold !important;
+  font-size : 400% !important;
+  color : rgb(138, 138, 138);
+}
+
+.aboutMeSubtitle {
+  font-weight : bold !important;
+  font-size : 200% !important;
+  color : white;
+}
 .parallax {
     background-attachment: fixed;
     background-position: center;
@@ -54,35 +64,60 @@ body {
     top : 100%;
     left : 5%;
     background: transparent !important;
+    display : flex;
+    align-items: center;
 }
 
 #me {
     position : absolute;
-    width : 15%;
-    top : 30%;
-    left : 77%;
+    width : 25%;
+    /*top : 30%;*/
+    left : 73%;
     border-radius : 20px;
 }
 
 #textbox {
     color : white;
-    position : absolute;
-    left: 33%;
-    top : 15%;
-    width : 40%;
+    /*position : absolute;
+    top : 15%;*/
+    width : 66%;
+}
+
+#downArrow {
+  position : absolute;
+  width : 3vw;
+  top : 88vh;
+  left : 48.5vw;
+  position : fixed;
+}
+
+#downArrowContainer {
+  position : absolute;
+  top : 83vh;
+  color : white;
+  text-align : center;
+  width : 100%;
 }
 
 h1 {
-    font-size: x-large !important;
-    color: rgb(191,196,196);
+    font-size: xx-large !important;
+    color : rgb(138, 138, 138);
+    font-weight: 900 !important;
 }
 
 h2 {
-    font-size: large !important;
+    font-size: medium !important;
+    color : rgb(138, 138, 138);
+    font-weight: 700 !important;
+}
+
+.hr {
+  border-top: 1px dashed white;
 }
 
 p {
-    font-size : small !important;
+    font-size : 90% !important;
+    font-weight : bold;
 }
 
 #fader {

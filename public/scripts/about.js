@@ -47,27 +47,57 @@ boxShadow = shadowBox3.join(' , ');
 $("#stars3").css("box-shadow", boxShadow)
 
 let checkScroll = true;
+let scrollSpeed = 2.5;
+let opacitySpeed = (1 - 0.05) * scrollSpeed / 100;
 $(window).bind('mousewheel DOMMouseScroll', function(event){
     if(checkScroll){
         if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
             console.log('scroll up');
-            console.log(parseInt($(".earth").css("height")))
             if(parseInt($(".container").css("top")) < $(window).height()){
-                $(".earth").animate({opacity: "+=0.01"}, 1)
-                $(".container").animate({top: "+=0.8vh"}, 1)
+                $(".earth").animate({opacity: `+=${opacitySpeed}`}, 0)
+                $(".container").animate({top: `+=${scrollSpeed}vh`}, 0)
+                $(".aboutMeHeadingContainer").css("opacity", $(".earth").css("opacity"));
+                $("#downArrowContainer").css("opacity", $(".earth").css("opacity"));
+                checkScroll = false;
             }
         }
         else {
             console.log('scroll down');
-            if(parseInt($(".container").css("top")) > 0) {
-                if(parseFloat($(".earth").css("opacity")) > 0.15){
-                    $(".earth").animate({opacity: "-=0.01"}, 1)
+            if(parseInt($(".container").css("top")) - scrollSpeed * $(window).height() / 100 > 0) {
+                if(parseFloat($(".earth").css("opacity")) > 0.05){
+                    $(".earth").animate({opacity: `-=${opacitySpeed}`}, 0)
                 }
-                $(".container").animate({top: "-=0.8vh"}, 1)
+                checkScroll = false;
+                $(".container").animate({top: `-=${scrollSpeed}vh`}, 0)
+            }
+            else {
+                $(".aboutMeHeadingContainer").css("opacity", 0);
+                $("#downArrowContainer").css("opacity", 0);
             }
         }
-        checkScroll = false;
     }
 
 });
-setInterval(function(){checkScroll = true;},1);
+setInterval(function(){checkScroll = true;},0.00001);
+
+let numberOfDirs = 0;
+let arrowMovement = 1;
+reverse = true;
+let downArrInterval = setInterval(function(){
+    $("#downArrow").css("top", parseFloat( $("#downArrow").css("top")) + arrowMovement);
+    numberOfDirs++;
+    if(numberOfDirs >= 8){
+        if(reverse){
+            arrowMovement = -2;
+            numberOfDirs = 4;
+            reverse = false;
+        }
+        else {
+            arrowMovement = 1;
+            numberOfDirs = 0;
+            reverse = true;
+        }
+        
+    }
+
+}, 100);

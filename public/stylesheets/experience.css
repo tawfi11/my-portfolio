@@ -95,15 +95,19 @@ hr {
 }
 
 .jobh1 {
+  font-family: 'Courier New', monospace; 
     font-weight: bold;
     font-size:175%;
 }
 
 .jobh2 {
+  font-family: 'Courier New', monospace; 
     font-size: 100%;
+    font-weight : bold;
 }
 
 .jobh3 {
+  font-family: 'Courier New', monospace; 
     font-size :100%;
 }
 

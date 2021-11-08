@@ -46,39 +46,6 @@ $("#stars2").css("box-shadow", boxShadow)
 boxShadow = shadowBox3.join(' , ');
 $("#stars3").css("box-shadow", boxShadow)
 
-let checkScroll = true;
-let scrollSpeed = 2.5;
-let opacitySpeed = (1 - 0.05) * scrollSpeed / 100;
-$(window).bind('mousewheel DOMMouseScroll', function(event){
-    if(checkScroll){
-        if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-            console.log('scroll up');
-            if(parseInt($(".container").css("top")) < $(window).height()){
-                $(".earth").animate({opacity: `+=${opacitySpeed}`}, 0)
-                $(".container").animate({top: `+=${scrollSpeed}vh`}, 0)
-                $(".aboutMeHeadingContainer").css("opacity", $(".earth").css("opacity"));
-                $("#downArrowContainer").css("opacity", $(".earth").css("opacity"));
-                checkScroll = false;
-            }
-        }
-        else {
-            console.log('scroll down');
-            if(parseInt($(".container").css("top")) - scrollSpeed * $(window).height() / 100 > 0) {
-                if(parseFloat($(".earth").css("opacity")) > 0.05){
-                    $(".earth").animate({opacity: `-=${opacitySpeed}`}, 0)
-                }
-                checkScroll = false;
-                $(".container").animate({top: `-=${scrollSpeed}vh`}, 0)
-            }
-            else {
-                $(".aboutMeHeadingContainer").css("opacity", 0);
-                $("#downArrowContainer").css("opacity", 0);
-            }
-        }
-    }
-
-});
-setInterval(function(){checkScroll = true;},0.00001);
 
 let numberOfDirs = 0;
 let arrowMovement = 1;
@@ -101,3 +68,44 @@ let downArrInterval = setInterval(function(){
     }
 
 }, 100);
+
+if($(window).width() < $(window).height()){
+    $(".container").css("top", "120vh");
+    $("body").css("overflow", "initial");
+}
+
+else {
+    let checkScroll = true;
+    let scrollSpeed = 2.5;
+    let opacitySpeed = (1 - 0.05) * scrollSpeed / 100;
+    $(window).bind('mousewheel DOMMouseScroll', function(event){
+        if(checkScroll){
+            if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+                console.log('scroll up');
+                if(parseInt($(".container").css("top")) < $(window).height()){
+                    $(".earth").animate({opacity: `+=${opacitySpeed}`}, 0)
+                    $(".container").animate({top: `+=${scrollSpeed}vh`}, 0)
+                    $(".aboutMeHeadingContainer").css("opacity", $(".earth").css("opacity"));
+                    $("#downArrowContainer").css("opacity", $(".earth").css("opacity"));
+                    checkScroll = false;
+                }
+            }
+            else {
+                console.log('scroll down');
+                if(parseInt($(".container").css("top")) - scrollSpeed * $(window).height() / 100 > 0) {
+                    if(parseFloat($(".earth").css("opacity")) > 0.05){
+                        $(".earth").animate({opacity: `-=${opacitySpeed}`}, 0)
+                    }
+                    checkScroll = false;
+                    $(".container").animate({top: `-=${scrollSpeed}vh`}, 0)
+                }
+                else {
+                    $(".aboutMeHeadingContainer").css("opacity", 0);
+                    $("#downArrowContainer").css("opacity", 0);
+                }
+            }
+        }
+
+    });
+    setInterval(function(){checkScroll = true;},0.00001);
+}

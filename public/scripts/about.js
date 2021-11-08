@@ -76,7 +76,7 @@ if($(window).width() < $(window).height()){
 
 else {
     let checkScroll = true;
-    let scrollSpeed = 3.5;
+    let scrollSpeed = 10;
     let opacitySpeed = (1 - 0.05) * scrollSpeed / 100;
     $(window).bind('mousewheel DOMMouseScroll', function(event){
         if(checkScroll){
@@ -92,7 +92,7 @@ else {
             }
             else {
                 console.log('scroll down');
-                if(parseInt($(".container").css("top")) - scrollSpeed * $(window).height() / 100 > 0) {
+                if(parseInt($(".container").css("top")) > 0) {
                     if(parseFloat($(".earth").css("opacity")) > 0.05){
                         $(".earth").animate({opacity: `-=${opacitySpeed}`}, 0)
                     }

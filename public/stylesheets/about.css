@@ -71,18 +71,18 @@ body {
 }
 
 #me {
-    position : relative;
-    width : 25%;
-    left : 5%;
+    position : absolute;
+    width : 20vw;
+    left : 69vw;
     border-radius : 30px;
     float : center;
 }
 
 #textbox {
     color : white;
-    /*position : absolute;
-    top : 15%;*/
-    width : 66%;
+    position : absolute;
+    /*top : 15%;*/
+    width : 66vw;
     float : center;
 }
 

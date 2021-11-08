@@ -1,11 +1,11 @@
 let shadowBox = []
 let star = 1000, star2 = 500, star3 = 100;
-
+let planetsArr = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'];
 if($(window).width() < $(window).height()){
     star /= 4;
     star2 = 0;
     star3  = 0;
-    let planetsArr = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'];
+    
     let planetSize = [1.5, 2, 4, 2, 30, 4.5, 6, 3];
     let i = 0;
     planetsArr.forEach(function(planet){
@@ -55,3 +55,25 @@ $($(".nav-item")[1]).hover(function(){
 }, function(){
     $("#earth").css("filter", "");
 })
+
+count = [];
+direction = [];
+let animCounts = [];
+planetsArr.forEach(function(planet){
+    animCounts.push(Math.floor(Math.random() * 10));
+    count.push(0);
+    direction.push(1);
+})
+setInterval(function(){
+    let i = 0;
+    planetsArr.forEach(function(planet){
+        $(`#${planet}`).css("top", parseFloat($(`#${planet}`).css("top")) + 0.5 * direction[i]);
+        console.log(`${planet} : ${$(`#${planet}`).css("top")}`)
+        count[i]++;
+        if(count[i] >= animCounts[i]){
+            count[i] = 0;
+            direction[i] *= -1;
+        }
+        i++;
+    })
+}, 300)

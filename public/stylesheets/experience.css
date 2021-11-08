@@ -52,9 +52,11 @@ hr {
     height : fit-content;
     background-color:rgb(26, 36, 63);
     opacity : 0.9;
-    padding : 10px;
+    padding : 0.5%;
     width : 100%;
     border-radius : 50px;
+    display : flex;
+    align-items: center;
 }
 
 .logo {
@@ -65,37 +67,48 @@ hr {
 }
 
 #me_job {
-    background : transparent;
+    background : transparent !important;
     text-align: center;
+    align-items: center;
+    display : flex;
+    padding : 0%;
 }
 
 #me_textBox {
+    float :center;
     position : absolute;
-    top : -15vh;
+    top : -10vh;
     left : 36vw;
     text-align: center;
+    align-items: center;
+    padding : 0% !important;
+    background : transparent !important;
 }
 
 .textBox {
-    float : left;
     color : white;
-    padding : 50px;
+    padding : 1%;
+    padding-left: 2%;
+    margin: 0 auto;
+    display : inline-block;
+    align-items : center;
 }
 
 .jobh1 {
     font-weight: bold;
+    font-size:175%;
 }
 
 .jobh2 {
-    font-size: 25px;
+    font-size: 100%;
 }
 
 .jobh3 {
-    font-size :18px;
+    font-size :100%;
 }
 
 li {
-    font-size : 20px;
+    font-size : 100%;
 }
 
 #downArrow {

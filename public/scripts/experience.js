@@ -76,29 +76,30 @@ if($(window).width() > $(window).height()){
         "position" : "absolute"});    
     
     $(window).bind('mousewheel DOMMouseScroll', function(event){
+        console.log(i);
         if(checkScroll){
             let oldIndex = i;
             if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
                 console.log('scroll up');
                 if(i > 0){
                     i -= 1;
+                    checkScroll = false;
                 }
             }
             else {
                 console.log('scroll down');
                 if(i < jobList.length-1){
                     i += 1;
+                    checkScroll = false;
                 }
             }
             if(oldIndex !== i){
                 switchJob(oldIndex, i);
-                checkScroll = false;
             }
             
 
         }
     });
-    558
 
     document.onkeydown = function(e) {
         if(checkScroll){
@@ -150,6 +151,8 @@ if($(window).width() > $(window).height()){
         }
     })
 
+
+
     $("#downArrow").click(function(e){
         i += 1;
         switchJob(i-1, i);
@@ -159,11 +162,15 @@ if($(window).width() > $(window).height()){
         i -= 1;
         switchJob(i+1, i);
     })
-    
 }
 else {
+    $("#twinkling_stars").remove();
+    $("#stars").remove();
+    $("#stars2").remove();
+
+    $("#me_jobh2").css("font-size", "100%");
     $(".nav-item").css("margin-left","");
-    $("#me_textBox").css({"left":"0vw", "top" : "5vh", "font-size": "12px"});
+    $("#me_textBox").css({"left":"0vw", "top" : "10vh"});
     $("#me_jobh1").remove();
     $("#progress").remove();
     $(".job").css("border-radius", "0")
@@ -175,6 +182,9 @@ else {
     })
     
 }
+let meTextRect = $("#me_textBox")[0].getBoundingClientRect();
+let pos = $(window).width() / 2 - meTextRect.width / 2;
+$("#me_textBox").css("left", pos);
 
 let numberOfDirs = 0;
 let arrowMovement = 1;

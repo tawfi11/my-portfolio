@@ -146,6 +146,10 @@ body {
   transform : rotate(-50deg);
 }
 
+.titleHeading {
+  font-size:1vw;
+}
+
 .stars,
 .twinkling,
 .clouds {

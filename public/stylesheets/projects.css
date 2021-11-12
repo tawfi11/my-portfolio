@@ -14,12 +14,38 @@
     overflow : hidden;
 }
 
+#headerBox {
+  width : 100vw;
+  position : absolute;
+  top : 20vh;
+  text-align: center;
+}
+
+#headerText {
+  font-family : Brave81;
+  color :rgb(196, 196, 196);
+  text-shadow : 4px 4px black;
+  font-weight : bold;
+  font-size : 2vw;
+}
+
 #downArrow {
   position : absolute;
   width : 3vw;
-  top : 90vh;
+  top : 94vh;
   left : 48.5vw;
   position : fixed;
+}
+
+#downArrowContainer {
+  position : absolute;
+  width : 10vw;
+  top : 90vh;
+  left : 45vw;
+  position : fixed;
+  text-align: center;
+  color : white;
+  font-family: 'Courier New', monospace !important;
 }
 
 #upArrow {
@@ -27,9 +53,20 @@
   transform : rotate(180deg);
   position : absolute;
   width : 3vw;
-  bottom : 85vh;
+  bottom : 88vh;
   left : 48.5vw;
   position : fixed;
+}
+
+#upArrowContainer {
+  position : absolute;
+  width : 10vw;
+  bottom : 82.5vh;
+  left : 45vw;
+  position : fixed;
+  text-align:center;
+  color : white;
+  font-family: 'Courier New', monospace !important;
   display : none;
 }
 

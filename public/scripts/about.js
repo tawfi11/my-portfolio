@@ -17,7 +17,7 @@ setInterval(function(){
 }, 8000);
 
 if($(window).height() > $(window).width()){
-    $(".nav-item").css("margin-left","");
+    //$(".nav-item").css("margin-left","");
 }
 
 let star = 1000, star2 = 500, star3 = 100;

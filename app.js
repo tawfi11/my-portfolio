@@ -25,6 +25,10 @@ app.get("/projects", function(req,res){
     res.render("projects", {})
 })
 
+app.get("/education", function(req,res){
+    res.render("education", {});
+})
+
 const port = process.env.PORT || 3000;
 app.listen(port, function(){
     console.log(`Listening on port ${port}`);

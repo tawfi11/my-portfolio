@@ -719,13 +719,13 @@ body {
   content: 'About Me'; }
 
 .set-speed #mars dl.infos dd:after {
-  content: ''; }
+  content: 'Education'; }
 
 .set-speed #jupiter dl.infos dd:after {
   content: 'Professional Experiences'; }
 
 .set-speed #saturn dl.infos dd:after {
-  content: 'Extracurricular Experiences'; }
+  content: 'Projects'; }
 
 .set-speed #uranus dl.infos dd:after {
   content: ''; }

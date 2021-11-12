@@ -1,19 +1,27 @@
 if($(window).height() < $(window).width()){
     let speed = 5;
     function switchRow(index, oldIndex) {
+        if(index === -1 ){
+            $("#headerBox").css("display", "initial");
+        }
+        else {
+            $("#headerBox").css("display", "none");
+        }
         let properPosY = index >= 0 ? parseFloat($(`.pos${index}`).css("top")) : parseFloat($(`.pos${oldIndex}`).css("top"));
         if(index === 0 && oldIndex === -1){
             let newRow = $(`.pos${index}`);
             newRow.fadeIn(200);
             newRow.css("top", $(window).height())
+            $("#downArrowContainer").css("display", "none");
+            $("#upArrowContainer").css("display", "none");
             let interval = setInterval(function(){
                 newRow.css("top", parseFloat(newRow.css("top")) - speed);
                 if(parseFloat(newRow.css("top")) <= properPosY){
                     newRow.css("top", properPosY);
                     checkScroll = true;
                     clearInterval(interval);
-                    $("#downArrow").css("display", "initial");
-                    $("#upArrow").css("display", "initial");
+                    $("#downArrowContainer").css("display", "initial");
+                    $("#upArrowContainer").css("display", "initial");
                 }
             }, 1);
         }
@@ -22,12 +30,14 @@ if($(window).height() < $(window).width()){
             oldRow.fadeOut(200);
             let interval = setInterval(function(){
                 oldRow.css("top", parseFloat(oldRow.css("top")) + speed);
+                $("#downArrowContainer").css("display", "none");
+                $("#upArrowContainer").css("display", "none");
                 if(parseFloat(oldRow.css("top")) >= $(window).height()){
                     oldRow.css("top", properPosY);
                     checkScroll = true;
                     clearInterval(interval);
-                    $("#downArrow").css("display", "initial");
-                    $("#upArrow").css("display", "none");
+                    $("#downArrowContainer").css("display", "initial");
+                    $("#upArrowContainer").css("display", "none");
                 }
             }, 1);
         }
@@ -40,14 +50,16 @@ if($(window).height() < $(window).width()){
             let interval = setInterval(function(){
                 newRow.css("top", parseFloat(newRow.css("top")) - speed);
                 oldRow.css("top", parseFloat(oldRow.css("top")) - speed);
+                $("#downArrowContainer").css("display", "none");
+                $("#upArrowContainer").css("display", "none");
                 if(parseFloat(newRow.css("top")) <= properPosY){
                     newRow.css("top", properPosY);
                     oldRow.css("top", properPosY);
                     checkScroll = true;
                     clearInterval(interval);
                     if(index === 1){
-                        $("#downArrow").css("display", "none");
-                         $("#upArrow").css("display", "initial");
+                        $("#downArrowContainer").css("display", "none");
+                         $("#upArrowContainer").css("display", "initial");
                     }
                 }
             }, 1)
@@ -61,13 +73,15 @@ if($(window).height() < $(window).width()){
             let interval = setInterval(function(){
                 newRow.css("top", parseFloat(newRow.css("top")) + speed);
                 oldRow.css("top", parseFloat(oldRow.css("top")) + speed);
+                $("#downArrowContainer").css("display", "none");
+                $("#upArrowContainer").css("display", "none");
                 if(parseFloat(newRow.css("top")) >= properPosY){
                     newRow.css("top", properPosY);
                     oldRow.css("top", properPosY);
                     checkScroll = true;
                     clearInterval(interval);
-                    $("#downArrow").css("display", "initial");
-                    $("#upArrow").css("display", "initial");
+                    $("#downArrowContainer").css("display", "initial");
+                    $("#upArrowContainer").css("display", "initial");
                 }
             }, 1) 
         }
@@ -155,12 +169,12 @@ if($(window).height() < $(window).width()){
         }
     };
 
-    $("#downArrow").click(function(e){
+    $("#downArrowContainer").click(function(e){
         i += 1;
         switchRow(i, i-1);
     })
 
-    $("#upArrow").click(function(e){
+    $("#upArrowContainer").click(function(e){
         i -= 1;
         switchRow(i, i+1);
     })

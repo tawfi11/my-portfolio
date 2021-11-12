@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'Andromeda';
+  src: url('../Fonts/Andromeda-eR2n.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "Brave81";
+  src: url('../Fonts/Outerorbit-rggRL.ttf') format('truetype'); /* Safari, Android, iOS*/
+}
+
+#fader {
+  position : fixed;
+  top : 0;
+  left: 0;
+  width: 100vw;
+  height : 100vh;
+  z-index: 999999;
+  pointer-events: none;
+  background: black;
+  animation-duration: 4000ms;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fade-out {
+  from { opacity: 1 }
+      to { opacity: 0 }
+}
+
+@keyframes fade-in {
+  from { opacity: 0 }
+      to { opacity: 1 }
+}
+
+#fader.fade-out {
+  opacity: 0;
+  animation-name: fade-out;
+}
+
+#fader.fade-in {
+  opacity: 1;
+  animation-name: fade-in;
+}
+
+
+body, html {
+    height : 100%;
+    background-color : black;
+}
+
+hr {
+    color:white;
+    border-color:white;
+}
+
+#linkedinBtn {
+  width : 2vw;
+  background:rgb(196, 196, 196);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#linkedinBtn:hover{
+  background-color:rgb(10,102,194);
+}
+
+#email {
+  width : 1.7vw;
+  background-color : rgb(196, 196, 196);
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin : 0.5vw;
+}
+
+#email:hover {
+  background-color:#C5221E;
+  cursor : pointer;
+}
+
+.parallax {
+    background-image: url("../Imgs/planets/marsWallpaper.jpg");
+    /* Full height */
+    height: 100vh;
+    width : 100vw;
+    top : 0vw;
+    position : absolute;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallaxHalf {
+    background-image: url("../Imgs/planets/marsWallpaper.jpg");
+    /* Full height */
+    height: 10%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*filter: blur(8px);
+    -webkit-filter: blur(8px);
+    background-color : black;
+    opacity: 1;*/
+}
+
+#headingBox {
+  width : 100vw;
+  position : absolute;
+  top : 20vh;
+  text-align: center;
+}
+
+#headingText {
+  font-family : Brave81;
+  color :rgb(196, 196, 196);
+  text-shadow : 4px 4px black;
+  font-weight : bold;
+  font-size : 2vw;
+}

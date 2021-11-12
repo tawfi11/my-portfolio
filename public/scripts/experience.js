@@ -169,7 +169,7 @@ else {
     $("#stars2").remove();
 
     $("#me_jobh2").css("font-size", "100%");
-    $(".nav-item").css("margin-left","");
+    //$(".nav-item").css("margin-left","");
     $("#me_textBox").css({"left":"0vw", "top" : "10vh"});
     $("#me_jobh1").remove();
     $("#progress").remove();

@@ -8,10 +8,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
-        
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
         <link rel="stylesheet" href="stylesheets/otherhome.css">
         <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -20,8 +18,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
-    <body>
-        <svg id="fader"></svg>
+<body class="opening hide-UI view-2D zoom-large data-close controls-close">
+    <svg id="fader"></svg>
         <script>
             fadeInPage();
             function fadeInPage() {
@@ -32,79 +30,159 @@
                 fader.classList.add('fade-out');
             }
         </script>
-
-        <div id="twinkling_stars">
-            <div class='stars'></div>
-            <div class='twinkling'></div>
+    
+    <div id="universe" class="scale-stretched">
+      <div id="galaxy">
+          <div id="twinkling_stars">
+        <div class='stars'></div>
+        <div class='twinkling'></div>
+    </div>
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <!--div id='stars3'></div-->
+        <div id="solar-system" class="earth">
+            <div id="mercury" class="orbit">
+                <div class="pos">
+                <div class="planet">
+                </div>
+                </div>
+            </div>
+          <div id="venus" class="orbit">
+            <div class="pos">
+              <div class="planet">
+                
+              </div>
+            </div>
+          </div>
+          <div id="earth" class="orbit">
+            <div class="pos">
+              <div class="orbit">
+                <div class="pos">
+                  <div class="moon"></div>
+                </div>
+              </div>
+                <div class="planet">
+                    <a href="/about" class="earth_link">
+                  <dl class="infos">
+                    <a href="/about" class="earth_link"></a>
+                    <dt>Earth</dt>
+                    <dd><span></span></dd>
+                  </dl>
+                  </a>
+                  
+                </div>
+            </div>
+          </div>
+          <div id="mars" class="orbit">
+            <div class="pos">
+              <div class="planet">
+                
+              </div>
+            </div>
+          </div>
+          <div id="jupiter" class="orbit">
+            <div class="pos">
+            <a href="/professional" class="jupiter_link">
+              <div class="planet">
+                <dl class="infos">
+                  <dt>Jupiter</dt>
+                  <dd><span></span></dd>
+                </dl>
+              </div>
+              </a>
+            </div>
+          </div>
+          <div id="saturn" class="orbit">
+            <div class="pos">
+              <div class="planet">
+                <div class="ring"></div>
+                <dl class="infos">
+                  <dt>Saturn</dt>
+                  <dd><span></span></dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div id="uranus" class="orbit">
+            <div class="pos">
+              <div class="planet">
+               
+              </div>
+            </div>
+          </div>
+          <div id="neptune" class="orbit">
+            <div class="pos">
+              <div class="planet">
+                
+              </div>
+            </div>
+          </div>
+          <div id="sun">
+            
+          </div>
         </div>
-        <div id='stars'></div>
-        <div id='stars2'></div>
-        <!--div id='stars3'></div-->
+      </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      if (typeof jQuery == 'undefined') {
+        document.write(unescape("%3Cscript src='js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+      }
+    </script>
 
-        <div class="inner"></div>
-
-        <div>
-            <img id="mercury" class="planet" src="Imgs/planets/mercury.png">
-        </div>
-
-        <div>
-            <img id="venus" class="planet" src="Imgs/planets/venus.png">
-        </div>
-
-        <div>
-            <h3 class="titleHeading" style="position:absolute;top:50vh;left:62vw;color:white;">About me</h3>
-            <a href="/about">
-                <img id="earth" class="planet" src="Imgs/planets/earth.png">
-            </a>
-        </div>
-
-        <div>
-            <img id="mars" class="planet" src="Imgs/planets/mars.png">
-        </div>
-
-        <div>
-            <a href="/professional"  >
-                <img id="jupiter" class="planet" src="Imgs/planets/jupiter.png">
-            </a>
-        </div>
-
-        <div style="width:fit-content;height:fit-content;background:blue;">
-            <a href="/projects">
-                <img id="saturn" class="planet" src="Imgs/planets/saturn.png">
-            </a>
-        </div>
-
-        <div>
-            <img id="uranus" class="planet" src="Imgs/planets/uranus.png">
-        </div>
-
-        <div>
-            <img id="neptune" class="planet" src="Imgs/planets/neptune.png">
-        </div>
+    <nav class="navbar navbar-dark navbar-expand-lg" style="top:0px;position:fixed;width:100%;background-color:black;font-size:12px;z-index:100;">
+        <a class="navbar-brand" href="https://www.linkedin.com/in/nusair-islam/" style="font-weight:bold;font-family:Andromeda;color:rgb(196, 196, 196)">NUSAIR ISLAM</a>
+        <a href="https://www.linkedin.com/in/nusair-islam/" target="_blank"><img src="Imgs/linkedin.png" id="linkedinBtn"></a>
+        <img src="Imgs/email.png" id="email">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav" style="background:black;width:100%;text-align:center;">
+            <li class="nav-item" style="margin-left : 40%;">
+                <a class="nav-link" href="/home" style="font-size:100%;color:yellow !important;font-family:Brave81">HOME</a>
+              </li>
+              <li class="nav-item" style="margin-left:5%;">
+                <a class="nav-link" href="/about" style="font-size:100%;font-family:Brave81">ABOUT ME</a>
+              </li>
+              <li class="nav-item" style="margin-left:5%;"> 
+                <a class="nav-link" href="/professional" style="font-size:100%;font-family:Brave81">PROFESSIONAL EXPERIENCE</a>
+              </li>
+              <li class="nav-item" style="margin-left:5%;"> 
+                  <a class="nav-link" href="/projects" style="font-size:100%;font-family:Brave81">PROJECTS</a>
+              </li>         
+          </ul>
+        </div>  
+      </nav>
+      <div style="padding:2px;margin:0 auto;height : 7vh;background-color:rgba(255, 255, 255, 0.74);position:absolute;display:none;color:black;z-index:101;" id="copyBox">
+        <p style="font-size: 0.7vw !important;">Copied my email to your clipboard!<br>Let's talk :) !</p>
+      </div>
+      <script>
+        if($(window).width() < $(window).height()) {
+          $("#linkedinBtn").remove();
+          $("#email").remove();
+          $(".nav-item").css("margin", "0 auto");
+        }
+        $("#email").click(function(e){
+          $("#copyBox").css({top:e.pageY, left:e.pageX});
+          copyEmail();
+        })
+        function copyEmail() {
+          /* Get the text field */
+          let copyText = "nusair11@gmail.com";
         
-        <nav class="navbar navbar-dark navbar-expand-lg" style="top:0px;position:fixed;width:100%;background-color:black;font-size:12px;">
-            <a class="navbar-brand" href="https://www.linkedin.com/in/nusair-islam/" style="font-weight:bold;font-family:Andromeda;color:rgb(196, 196, 196)">NUSAIR ISLAM</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-              <ul class="navbar-nav" style="background:black;width:100%;text-align:center;">
-                <li class="nav-item" style="margin-left : 40%;">
-                    <a class="nav-link" href="/home" style="font-size:100%;color:yellow !important;font-family:Brave81">HOME</a>
-                  </li>
-                  <li class="nav-item" style="margin-left:5%;">
-                    <a class="nav-link" href="/about" style="font-size:100%;font-family:Brave81">ABOUT ME</a>
-                  </li>
-                  <li class="nav-item" style="margin-left:5%;"> 
-                    <a class="nav-link" href="/professional" style="font-size:100%;font-family:Brave81">PROFESSIONAL EXPERIENCE</a>
-                  </li>
-                  <li class="nav-item" style="margin-left:5%;"> 
-                      <a class="nav-link" href="/projects" style="font-size:100%;font-family:Brave81">PROJECTS</a>
-                  </li>         
-              </ul>
-            </div>  
-          </nav>
-
-        <script src="scripts/otherhome.js" async defer></script>
-    </body>
-</html>
+          navigator.clipboard.writeText(copyText);
+          $("#copyBox").fadeIn(100);
+          setTimeout(function(){
+            $("#copyBox").fadeOut(1000);
+          }, 1000);
+          
+          
+        }
+        </script>
+    
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <script src="scripts/otherhome.js"></script>
+  </body>
+  </html>

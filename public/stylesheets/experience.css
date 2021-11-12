@@ -12,12 +12,42 @@
 body, html {
     height : 100%;
     background-color : black;
-    font-family: "Brave81";
 }
 
 hr {
     color:white;
     border-color:white;
+}
+
+#linkedinBtn {
+  width : 2vw;
+  background:rgb(196, 196, 196);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#linkedinBtn:hover{
+  background-color:rgb(10,102,194);
+}
+
+#email {
+  width : 1.7vw;
+  background-color : rgb(196, 196, 196);
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin : 0.5vw;
+}
+
+#email:hover {
+  background-color:#C5221E;
+  cursor : pointer;
 }
 
 .parallax {
@@ -123,17 +153,37 @@ li {
     position : fixed;
 }
 
+#downArrowContainer {
+  position : absolute;
+  width : 10vw;
+  top : 75vh;
+  left : 45vw;
+  position : fixed;
+  text-align: center;
+  color : white;
+  font-family: 'Courier New', monospace !important;
+}
+
 #upArrow {
     position : absolute;
     transform : rotate(180deg);
-    position : absolute;
     width : 3vw;
     bottom : 86vh;
     left : 48.5vw;
     position : fixed;
-    display : none;
 }
 
+#upArrowContainer {
+  position : absolute;
+  width : 10vw;
+  bottom : 78.5vh;
+  left : 45vw;
+  position : fixed;
+  text-align:center;
+  color : white;
+  display : none;
+  font-family: 'Courier New', monospace !important;
+}
 
 #download_btn {
   background-color : white;
@@ -154,7 +204,7 @@ li {
     z-index: 999999;
     pointer-events: none;
     background: black;
-    animation-duration: 2000ms;
+    animation-duration: 4000ms;
     animation-timing-function: ease-in-out;
 }
 

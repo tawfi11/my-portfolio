@@ -45,7 +45,7 @@
         <div class="job" id="me_job">
             
             <div class="textBox" id="me_textBox">
-                <!--h1 class="jobh1" id="me_jobh1" style="color:rgb(158, 158, 158);">Please feel free to download my CV</h1-->
+                <h1 class="jobh1" id="me_jobh1" style="color:rgb(158, 158, 158);font-family:Brave81 !important;">This page details my proessional experiences</h1>
                 <h2 class="jobh2" id="me_jobh2">Please feel free to download my CV</h2>
                 <a href="Nusair Islam Amazon Resume.pdf" target="_blank">
                 <button id="download_btn">
@@ -66,8 +66,14 @@
         </div>
 
 
-        <img id="downArrow" src="Imgs/down.png">
-        <img id="upArrow" src="Imgs/down.png">
+        <div id="downArrowContainer">
+            <h3 style="font-weight:bold;">scroll</h3>
+          <img src="Imgs/down.png"  id="downArrow">
+        </div>
+        <div id="upArrowContainer">
+            <h3 style="font-weight:bold;">scroll</h3>
+          <img src="Imgs/down.png"  id="upArrow">
+        </div>
         
 
         <div class="parallaxHalf"></div>
@@ -142,6 +148,8 @@
 
         <nav class="navbar navbar-dark navbar-expand-lg" style="top:0px;position:fixed;width:100%;background-color:black;font-size:12px;">
             <a class="navbar-brand" href="https://www.linkedin.com/in/nusair-islam/" style="font-weight:bold;font-family:Andromeda;color:rgb(196, 196, 196)">NUSAIR ISLAM</a>
+            <a href="https://www.linkedin.com/in/nusair-islam/" target="_blank"><img src="Imgs/linkedin.png" id="linkedinBtn"></a>
+            <img src="Imgs/email.png" id="email">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -162,6 +170,33 @@
               </ul>
             </div>  
           </nav>
+
+          <div style="padding:2px;margin:0 auto;height : 7vh;background-color:rgba(255, 255, 255, 0.74);position:absolute;display:none;color:black;z-index:101;" id="copyBox">
+            <p style="font-size: 0.7vw !important;">Copied my email to your clipboard!<br>Let's talk!</p>
+          </div>
+          <script>
+            if($(window).width() < $(window).height()) {
+              $("#linkedinBtn").remove();
+              $("#email").remove();
+              $(".nav-item").css("margin", "0 auto");
+            }
+            $("#email").click(function(e){
+              $("#copyBox").css({top:e.pageY, left:e.pageX});
+              copyEmail();
+            })
+            function copyEmail() {
+              /* Get the text field */
+              let copyText = "nusair11@gmail.com";
+            
+              navigator.clipboard.writeText(copyText);
+              $("#copyBox").fadeIn(100);
+              setTimeout(function(){
+                $("#copyBox").fadeOut(1000);
+              }, 1000);
+              
+              
+            }
+            </script>
 
         <script src="scripts/experience.js" async defer></script>
     </body>

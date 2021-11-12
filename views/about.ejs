@@ -57,7 +57,7 @@
             <hr class="hr">
             <p class="p">
               I have a strong passion for software and electrical engineering, specifically in the fields 
-              of AI, web development, computer architecture, and robotics. I am also very interested in relativity, quantum, and theoretical physics. I enjoy learning about all aspects of engineering
+              of AI, web development, computer architecture, and robotics. I am also very interested in relativity, quantum, and specifically astrophysics. I enjoy learning about all aspects of engineering
               so that I can build a "full picture" understanding.
             </p>
             <br>
@@ -81,6 +81,8 @@
 
         <nav class="navbar navbar-dark navbar-expand-lg" style="top:0px;position:fixed;width:100%;background-color:black;font-size:12px;">
             <a class="navbar-brand" href="https://www.linkedin.com/in/nusair-islam/" style="font-weight:bold;font-family:Andromeda;color:rgb(196, 196, 196)">NUSAIR ISLAM</a>
+            <a href="https://www.linkedin.com/in/nusair-islam/" target="_blank"><img src="Imgs/linkedin.png" id="linkedinBtn"></a>
+            <img src="Imgs/email.png" id="email">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -101,6 +103,32 @@
               </ul>
             </div>  
           </nav>
+          <div style="padding:2px;margin:0 auto;height : 7vh;background-color:rgba(255, 255, 255, 0.74);position:absolute;display:none;color:black;z-index:101;" id="copyBox">
+            <p style="font-size: 0.7vw !important;">Copied my email to your clipboard!<br>Let's talk!</p>
+          </div>
+          <script>
+            if($(window).width() < $(window).height()) {
+              $("#linkedinBtn").remove();
+              $("#email").remove();
+              $(".nav-item").css("margin", "0 auto");
+            }
+            $("#email").click(function(e){
+              $("#copyBox").css({top:e.pageY, left:e.pageX});
+              copyEmail();
+            })
+            function copyEmail() {
+              /* Get the text field */
+              let copyText = "nusair11@gmail.com";
+            
+              navigator.clipboard.writeText(copyText);
+              $("#copyBox").fadeIn(100);
+              setTimeout(function(){
+                $("#copyBox").fadeOut(1000);
+              }, 1000);
+              
+              
+            }
+            </script>
 
         <script src="scripts/about.js" async defer></script>
     </body>

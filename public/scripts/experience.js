@@ -18,8 +18,8 @@ function fixStuff(i){
 }
 let checkScroll = true;
 function switchJob(oldIndex, i){
-    $("#downArrow").css("display", "none");
-    $("#upArrow").css("display", "none");
+    $("#downArrowContainer").css("display", "none");
+    $("#upArrowContainer").css("display", "none");
     $(`#${jobList[oldIndex]}_job`).fadeOut(300, "swing");
      $(`#${jobList[i]}_job`).fadeIn(300, "swing");
      let direction = (i > oldIndex) ? -1 : 1;
@@ -43,10 +43,10 @@ function switchJob(oldIndex, i){
         if((parseFloat(current.css("top")) <= $(window).height() / 4 && direction == -1) || ((parseFloat(current.css("top")) >= $(window).height() / 4 && direction == 1))){
             checkScroll = true;
             if(i < jobList.length - 1){
-                $("#downArrow").css("display", "initial");
+                $("#downArrowContainer").css("display", "initial");
             }
             if(i > 0){
-                $("#upArrow").css("display", "initial");
+                $("#upArrowContainer").css("display", "initial");
             }
             clearInterval(interval);
         }

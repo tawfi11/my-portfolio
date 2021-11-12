@@ -133,7 +133,7 @@ p {
     z-index: 999999;
     pointer-events: none;
     background: black;
-    animation-duration: 2000ms;
+    animation-duration: 4000ms;
     animation-timing-function: ease-in-out;
 }
 
@@ -155,6 +155,37 @@ p {
 #fader.fade-in {
     opacity: 1;
     animation-name: fade-in;
+}
+
+#linkedinBtn {
+  width : 2vw;
+  background:rgb(196, 196, 196);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#linkedinBtn:hover{
+  background-color:rgb(10,102,194);
+}
+
+#email {
+  width : 1.7vw;
+  background-color : rgb(196, 196, 196);
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin : 0.5vw;
+}
+
+#email:hover {
+  background-color:#C5221E;
+  cursor : pointer;
 }
 
 .stars {

@@ -44,7 +44,9 @@
 
 body, html {
     height : 100%;
-    background-color : black;
+    background-color : black !important;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
 }
 
 hr {
@@ -66,6 +68,22 @@ hr {
   background-color:rgb(10,102,194);
 }
 
+#gitBtn {
+  width : 1.8vw;
+  background:rgb(196, 196, 196);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius : 5px;
+  margin-left : 0.3vw;
+}
+
+#gitBtn:hover {
+  background-color: purple;
+}
+
 #email {
   width : 1.7vw;
   background-color : rgb(196, 196, 196);
@@ -83,12 +101,28 @@ hr {
   cursor : pointer;
 }
 
+
+#downArrow {
+  position : absolute;
+  width : 3vw;
+  top : 88vh;
+  left : 48.5vw;
+  position : fixed;
+}
+
+#downArrowContainer {
+  position : absolute;
+  top : 83vh;
+  color : white;
+  text-align : center;
+  width : 100%;
+  height : 2vh;
+}
 .parallax {
     background-image: url("../Imgs/planets/marsWallpaper.jpg");
     /* Full height */
     height: 100vh;
     width : 100vw;
-    top : 0vw;
     position : absolute;
 
     /* Create the parallax scrolling effect */
@@ -119,6 +153,8 @@ hr {
   position : absolute;
   top : 20vh;
   text-align: center;
+  z-index:5;
+  opacity : 1;
 }
 
 #headingText {
@@ -127,4 +163,64 @@ hr {
   text-shadow : 4px 4px black;
   font-weight : bold;
   font-size : 2vw;
+}
+
+#headingSubtitle {
+  font-weight : bold !important;
+  font-size : 2vw !important;
+  color : white;
+  text-shadow : 2px 2px black;
+}
+
+#bigBox {
+  position : absolute;
+  top : 100vh;
+  /*background-image : url("../Imgs/planets/marsWallpaper.jpg");
+  /* Create the parallax scrolling effect 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;*/
+  background : transparent !important;
+  width : 100vw;
+  margin-left: 5vw;
+}
+
+.course {
+  width : 30vw;
+  padding : 1vw;
+  background : transparent !important;
+}
+
+.courseTitle {
+
+}
+
+.courseTitleText {
+  color :rgb(196, 196, 196);
+  font-weight : bold;
+  font-size : 1.5vw;
+}
+
+.courseCode {
+
+}
+
+.courseCodeText {
+  color :rgba(196, 196, 196, 0.582);
+  font-size : 1vw;
+  background : transparent;
+}
+
+.courseDescription {
+
+}
+
+.courseDescriptionText {
+  color: white;
+  font-size : 0.8vw;
+}
+
+.courseSupp {
+  font-weight : bold;
 }

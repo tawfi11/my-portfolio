@@ -105,8 +105,27 @@ body {
   border-radius: 20px;
 }
 
+.mars_link:hover {
+  box-shadow : 10px 10px 40px 20px white;
+}
+
 .jupiter_link:hover {
-  box-shadow:5px 5px 40px 40px white;
+  box-shadow:5px 5px 60px 60px white;
+  border-radius : 500px;
+
+}
+
+.saturn_link {
+  position : relative;
+  width : 100%;
+  height : 100%;
+  display : flex;
+  float : left;
+}
+
+.saturn_link:hover {
+  box-shadow:0px 0px 100px 30px white;
+  border-radius : 500px;
 }
 
 #universe {
@@ -1710,4 +1729,20 @@ body {
 #email:hover {
   background-color:#C5221E;
   cursor : pointer;
+}
+
+#gitBtn {
+  width : 1.8vw;
+  background:rgb(196, 196, 196);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius : 5px;
+  margin-left : 0.3vw;
+}
+
+#gitBtn:hover {
+  background-color: purple;
 }

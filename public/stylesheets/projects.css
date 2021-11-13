@@ -128,6 +128,7 @@
   border: 3px solid #8A8A8A;
   border-radius:20px;
   padding : 20px;
+  box-shadow : 5px 5px 15px 15px black;
 }
 
 h1.projectDesc {
@@ -138,20 +139,21 @@ h1.projectDesc {
 }
 
 h2.projectDesc {
-  font-size: 0.8vw;
+  font-size: 1vw;
   font-family: 'Courier New', monospace; 
-  color: rgb(255, 255, 255);
+  color: rgb(196, 196, 196);
 }
 
 h3.projectDesc {
   font-family: 'Courier New', monospace;
-  font-size:1.2vw;
-  color : white;
+  font-size:0.8vw;
+  color : rgb(196, 196, 196);
 }
 
 p.projectDesc {
   color: white;
   font-size : 1vw;
+  font-weight : bold;
 }
 
 .media {
@@ -159,6 +161,7 @@ p.projectDesc {
   max-width : 100%;
   text-align : center;
   margin : auto;
+  box-shadow : 0px 0px 5px 3px black;
 }
 
 #linkedinBtn {
@@ -192,6 +195,21 @@ p.projectDesc {
   cursor : pointer;
 }
 
+#gitBtn {
+  width : 1.8vw;
+  background:rgb(196, 196, 196);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius : 5px;
+  margin-left : 0.3vw;
+}
+
+#gitBtn:hover {
+  background-color: purple;
+}
 
 #fader {
   position : fixed;

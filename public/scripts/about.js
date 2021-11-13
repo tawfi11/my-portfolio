@@ -70,8 +70,13 @@ let downArrInterval = setInterval(function(){
 }, 100);
 
 if($(window).width() < $(window).height()){
-    $(".container").css("top", "120vh");
+    $(".container").css("top", "20vh");
+    $("#me").css("top", "0")
+    $("#me").css("width", "100vw")
     $("body").css("overflow", "initial");
+    $(".aboutMeHeading").css("font-size", 200);
+    $(".aboutMeHeadingContainer").css("width", "100%");
+    $("#downArrowContainer").remove();
 }
 
 else {

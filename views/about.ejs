@@ -31,6 +31,12 @@
             }
         </script>
 
+        <!--script>
+          if($(window).width() < $(window).height()){
+            window.location = "about.html";
+          }
+        </script-->
+
       
 
 
@@ -79,59 +85,62 @@
         </div>
           
 
-        <<nav class="navbar navbar-dark navbar-expand-lg" style="top:0px;position:fixed;width:100%;background-color:black;font-size:12px;z-index:100;">
+        <nav class="navbar navbar-dark navbar-expand-lg" style="top:0px;position:fixed;width:100%;background-color:black;font-size:12px;z-index:100;">
           <a class="navbar-brand" href="/" style="font-weight:bold;font-family:Andromeda;color:rgb(196, 196, 196)">NUSAIR ISLAM</a>
           <a href="https://www.linkedin.com/in/nusair-islam/" target="_blank"><img src="Imgs/linkedin.png" id="linkedinBtn"></a>
           <img src="Imgs/email.png" id="email">
+          <a href="https://github.com/tawfi11" target="_blank"><img src="Imgs/github.png" id="gitBtn"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav" style="background:black;width:100vw;">
               <li class="nav-item" style="margin-left : 40vw;">
-                <a class="nav-link" href="/home" style="font-size:100%;font-family:Brave81;">HOME</a>
-              </li>
-              <li class="nav-item" style="margin-left:3vw;">
-                <a class="nav-link" href="/about" style="font-size:100%;font-family:Brave81;color:yellow !important;">ABOUT ME</a>
-              </li>
-              <li class="nav-item" style="margin-left : 3vw;">
-                <a class="nav-link" href="/education" style="font-size:100%;font-family:Brave81;">EDUCATION</a>
-              </li>
-              <li class="nav-item" style="margin-left:3vw;"> 
-                <a class="nav-link" href="/professional" style="font-size:100%;font-family:Brave81;">PROFESSIONAL EXPERIENCE</a>
-              </li>
-              <li class="nav-item" style="margin-left:3vw;right : 0vw;"> 
-                  <a class="nav-link" href="/projects" style="font-size:100%;font-family:Brave81">PROJECTS</a>
-              </li>    
+                  <a class="nav-link" href="/home" style="font-size:100%;font-family:Brave81;">HOME</a>
+                </li>
+                <li class="nav-item" style="margin-left:3vw;">
+                  <a class="nav-link" href="/about" style="font-size:100%;font-family:Brave81;color:yellow !important;">ABOUT ME</a>
+                </li>
+                <li class="nav-item" style="margin-left : 3vw;">
+                  <a class="nav-link" href="/education" style="font-size:100%;font-family:Brave81;">EDUCATION</a>
+                </li>
+                <li class="nav-item" style="margin-left:3vw;"> 
+                  <a class="nav-link" href="/professional" style="font-size:100%;font-family:Brave81;">PROFESSIONAL EXPERIENCE</a>
+                </li>
+                <li class="nav-item" style="margin-left:3vw;right : 0vw;"> 
+                    <a class="nav-link" href="/projects" style="font-size:100%;font-family:Brave81">PROJECTS</a>
+                </li>         
             </ul>
           </div>  
         </nav>
-          <div style="padding:2px;margin:0 auto;height : 7vh;background-color:rgba(255, 255, 255, 0.74);position:absolute;display:none;color:black;z-index:101;" id="copyBox">
-            <p style="font-size: 0.7vw !important;">Copied my email to your clipboard!<br>Let's talk!</p>
-          </div>
-          <script>
-            if($(window).width() < $(window).height()) {
-              $("#linkedinBtn").remove();
-              $("#email").remove();
-              $(".nav-item").css("margin", "0 auto");
-            }
-            $("#email").click(function(e){
-              $("#copyBox").css({top:e.pageY, left:e.pageX});
-              copyEmail();
-            })
-            function copyEmail() {
-              /* Get the text field */
-              let copyText = "nusair11@gmail.com";
+
+        <div style="padding:2px;margin:0 auto;height : 7vh;background-color:rgba(255, 255, 255, 0.74);position:absolute;display:none;color:black;z-index:101;" id="copyBox">
+          <p style="font-size: 0.7vw !important;">Copied my email to your clipboard!<br>Let's talk!</p>
+        </div>
+        <script>
+          if($(window).width() < $(window).height()) {
+            $("#linkedinBtn").remove();
+            $("#email").remove();
+            $("#gitBtn").remove();
+            $(".nav-item").css("margin", "0 auto");
+          }
+          $("#email").click(function(e){
+            $("#copyBox").css({top:e.pageY, left:e.pageX});
+            copyEmail();
+          })
+          function copyEmail() {
+            /* Get the text field */
+            let copyText = "nusair11@gmail.com";
+          
+            navigator.clipboard.writeText(copyText);
+            $("#copyBox").fadeIn(100);
+            setTimeout(function(){
+              $("#copyBox").fadeOut(1000);
+            }, 1000);
             
-              navigator.clipboard.writeText(copyText);
-              $("#copyBox").fadeIn(100);
-              setTimeout(function(){
-                $("#copyBox").fadeOut(1000);
-              }, 1000);
-              
-              
-            }
-            </script>
+            
+          }
+          </script>
 
         <script src="scripts/about.js" async defer></script>
     </body>

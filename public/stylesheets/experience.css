@@ -50,6 +50,22 @@ hr {
   cursor : pointer;
 }
 
+#gitBtn {
+  width : 1.8vw;
+  background:rgb(196, 196, 196);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius : 5px;
+  margin-left : 0.3vw;
+}
+
+#gitBtn:hover {
+  background-color: purple;
+}
+
 .parallax {
     background-image: url("../Imgs/planets/jupiterWallpaper.png");
     /* Full height */

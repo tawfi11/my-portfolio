@@ -19,9 +19,14 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
     <body>
+      <script>
+        if($(window).width() < $(window).height()){
+          window.location = "html/about.html";
+        }
+     </script>
         <svg id="fader"></svg>
         <script>
-            fadeInPage();
+            fadeInPage(); 
             function fadeInPage() {
                 if(!window.AnimationEvent){
                     return;
@@ -29,15 +34,7 @@
                 let fader = document.getElementById("fader");
                 fader.classList.add('fade-out');
             }
-        </script>
-
-        <!--script>
-          if($(window).width() < $(window).height()){
-            window.location = "about.html";
-          }
-        </script-->
-
-      
+        </script>      
 
 
         <div class="earth parallax">
@@ -78,7 +75,9 @@
             </p>
             <br>
             <p style="font-size:85% !important;color:rgb(138, 138, 138);">LinkedIn: <a href="https://www.linkedin.com/in/nusair-islam/">https://www.linkedin.com/in/nusair-islam/</a>
-              <br>Email: <a href="mailto:nusair11@gmail.com">nusair11@gmail.com</a></p>
+              <br>Email: <a href="mailto:nusair11@gmail.com">nusair11@gmail.com</a>
+              <br>Github: <a href="https://github.com/tawfi11">https://github.com/tawfi11</a>
+            </p>
           </div>
     
           <img id="me" src="Imgs/me/0.jpg">

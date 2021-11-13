@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../stylesheets/mobile/projects.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <script>
+            if($(window).width() > $(window).height()) {
+                window.location.href = "/projects"
+            }
+        </script>
+
+        <svg id="fader"></svg>
+        <script>
+            fadeInPage();
+            function fadeInPage() {
+                if(!window.AnimationEvent){
+                    return;
+                }
+                let fader = document.getElementById("fader");
+                fader.classList.add('fade-out');
+            }
+        </script>
+
+        <div class="parallax"></div>
+        <div id="headerBox">
+            <h3 id="headerText">Take a look at some of my favorite projects!</h3>
+            <h3 id="headerSubtitle">Click the images to see the projects</h3>
+          </div>
+
+          <table id="bigBox">
+            <tr>
+                <td class="project">
+                    <div class="projectHeading">
+                        <h1 class="projectDesc">Python Voice Assistant</h1>
+                      </div>
+                      <div class="projectDate">
+                        <h3 class="projectDesc"><i>November 2020 - Present</i></h3>
+                      </div>
+                      <video class="media" controls>
+                        <source src="../Vids/axel.mp4" type="video/mp4">
+                      </video>
+                      <div class="projectHighlights">
+                        <p class="projectDesc">
+                          A python-based voice assistant that utilizes machine learning frameworks such as 
+                          TensorFlow and Spark, and natural language processing framework like Spacy to parse 
+                          speech into decisions. The current video showcases the spotify feature of the voice assistant (<i>turn sound on</i>).
+                        </p>
+                      </div>
+                      <div class="projectTags">
+                        <hr style="border-top: 1px solid white;">
+                        <h2 class="projectDesc">Python, Tensorflow, Apache Spark, Natural Language Processing, Spacy, JavaScript, Logistic Regression, APIs</h2>
+                      </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="project">
+                    <div class="projectHeading">
+                        <h1 class="projectDesc">Unity Indie Game</h1>
+                      </div>
+                      <div class="projectDate">
+                        <h3 class="projectDesc"><i>October 2020 - PRESENT</i></h3>
+                      </div>
+                      <video class="media" controls>
+                        <source src="../Vids/ship battle 1.mp4" type="video/mp4">
+                      </video>
+                      <div class="projectHighlights">
+                        <p class="projectDesc">
+                          A Unity (C#)-based indie game developed completely by students. The story is an inspired
+                          personal story. All assets, including visuals, sounds, background, and scripts were developed
+                          by myself and my talented team.
+                        </p>
+                      </div>
+                        <div class="projectTags">
+                          <hr style="border-top: 1px solid white;">
+                          <h2 class="projectDesc">C#, Unity, MultiProcessing, Path Finding, Creativity, Leadership, Project Management, Time Management Systems</h2>
+                        </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="project">
+                <div class="projectHeading">
+                    <h1 class="projectDesc">Mongo DB Online Todo List</h1>
+                  </div>
+                  <div class="projectDate">
+                    <h3 class="projectDesc"><i>September 2020 - September 2020</i></h3>
+                  </div>
+                  <a href="https://guarded-beach-27083.herokuapp.com/" target="_blank"><img src="../Imgs/todolist.png" class="media"></a>
+                  <div class="projectHighlights">
+                    <p class="projectDesc">
+                      Created a todo list using EJS, Express, Node.JS for the application side. Utilized Heroku
+                      to publish the application. And, created a mongoDB database on the backend to store 
+                      entries.
+                    </p>
+                  </div>
+                  <div class="projectTags">
+                    <hr style="border-top: 1px solid white;">
+                    <h2 class="projectDesc">Node.JS, Express, MongoDB, Heroku, HTML/CSS</h2>
+                  </div>
+                </div>
+            </td>
+            </tr>
+            <tr>
+                <td class="project">
+                    <div class="projectHeading">
+                        <h1 class="projectDesc">UBC Open Robotics</h1>
+                      </div>
+                      <div class="projectDate">
+                        <h3 class="projectDesc"><i>September 2020 - PRESENT</i></h3>
+                      </div>
+                      <a href="http://www.ubcopenrobotics.ca/" target="_blank"><img src="../Imgs/logos/ubcopenroboticslogo.jpg" class="media"></a>
+                      <div class="projectHighlights">
+                        <p class="projectDesc">
+                          A UBC design team focused on creating a robot to perform common household tasks. I am a member of the
+                          electrical team, I am responsible for analyzing, drawing, and debugging PCBs, as well as creating, testing, and
+                          implementing microcontroller circuits
+                        </p>
+                      </div>
+                      <div class="projectTags">
+                        <hr style="border-top: 1px solid white;">
+                        <h2 class="projectDesc">PCB, Arduino, Circuit Maker, C</h2>
+                      </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="project">
+                    <div class="projectHeading">
+                        <h1 class="projectDesc">Incline Education</h1>
+                      </div>
+                      <div class="projectDate">
+                        <h3 class="projectDesc"><i>February 2020 - August 2020</i></h3>
+                      </div>
+                      <a href="https://inclineedu.org/blog/the_effects_of_stress_on_wellbeing" target="_blank"><img src="../Imgs/ie.jfif" class="media"></a>
+                      <div class="projectHighlights">
+                        <p class="projectDesc">
+                          A non-profit organization to help high school and first year university students transition into their undergraduate life.
+                          Developed user website using AWS Lightsail as a host and managed blog production.
+                          (Click the picture to read a blog I wrote!)
+                        </p>
+                      </div>
+                      <div class="projectTags">
+                        <hr style="border-top: 1px solid white;">
+                        <h2 class="projectDesc">Node.JS, Express, MongoDB, AWS:Lightsail, HTML/CSS, PHP</h2>
+                      </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="project">
+                    <div class="projectHeading">
+                        <h1 class="projectDesc">UBC Orbit</h1>
+                      </div>
+                      <div class="projectDate">
+                        <h3 class="projectDesc"><i>September 2018 - April 2020</i></h3>
+                      </div>
+                      
+                      <a href="https://www.ubcorbit.com/" target="_blank"><img class="media" src="../Imgs/logos/orbit.jfif"></a>
+                      <div class="projectHighlights">
+                        <p class="projectDesc">
+                          A UBC design team focused on creating a satellite to launch into space. I was responsible for creating SolidWorks drawings of parts, analyzing solidWorks
+                          assemblies, adjusting the satellite caging, and performing vibrational and thermal simulations
+                        </p>
+                      </div>
+                      <div class="projectTags">
+                        <hr style="border-top: 1px solid white;">
+                        <h2 class="projectDesc">SolidWorks, Ansys</h2>
+                      </div>
+                </td>
+            </tr>
+          </table>
+        
+        
+        <nav class="navbar navbar-dark navbar-expand-lg" style="top:0px;position:fixed;width:100%;background-color:black;font-size:12px;z-index:100;">
+            <a class="navbar-brand" href="/" style="font-weight:bold;font-family:Andromeda;color:rgb(196, 196, 196)">NUSAIR ISLAM</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav" style="background:black;width:100vw;">
+                <li class="nav-item" style="text-align:center;">
+                    <a class="nav-link" href="/home" style="font-size:100%;font-family:Brave81;text-align:center;">HOME</a>
+                    </li>
+                    <li class="nav-item" styles="">
+                    <a class="nav-link" href="/about" style="font-size:100%;font-family:Brave81;text-align:center;">ABOUT ME</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/education" style="font-size:100%;font-family:Brave81;text-align:center;">EDUCATION</a>
+                    </li>
+                    <li class="nav-item"> 
+                    <a class="nav-link" href="/professional" style="font-size:100%;font-family:Brave81;text-align:center;">PROFESSIONAL EXPERIENCE</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="/projects" style="font-size:100%;font-family:Brave81;text-align:center;color:yellow !important;">PROJECTS</a>
+                    </li>         
+                </ul>
+            </div>  
+        </nav>
+        <script src="" async defer></script>
+    </body>
+</html>

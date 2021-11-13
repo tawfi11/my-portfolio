@@ -18,6 +18,12 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
     <body>
+      <script>
+        if($(window).width() < $(window).height()){
+          window.location = "html/projects.html";
+        }
+      </script>
+      
       <svg id="fader"></svg>
         <script>
             fadeInPage();
@@ -29,13 +35,14 @@
                 fader.classList.add('fade-out');
             }
         </script>
-
+        
         
   
         <div class="parallax"></div>
 
         <div id="headerBox">
           <h3 id="headerText">Take a look at some of my favorite projects!</h3>
+          <h3 id="headerSubtitle">Click the images to see the projects</h3>
         </div>
 
         <div id="downArrowContainer">

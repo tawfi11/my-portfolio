@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../stylesheets/mobile/about.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <script>
+            if($(window).width() > $(window).height()) {
+                window.location.href = "/about"
+            }
+        </script>
+        <svg id="fader"></svg>
+        <script>
+            fadeInPage(); 
+            function fadeInPage() {
+                if(!window.AnimationEvent){
+                    return;
+                }
+                let fader = document.getElementById("fader");
+                fader.classList.add('fade-out');
+            }
+        </script>      
+        <div class="earth parallax">
+            <div class="aboutMeHeadingContainer">
+              <h1 class="aboutMeHeading" style="font-family:Brave81;">NUSAIR ISLAM</h1>
+              <h2 class="aboutMeSubtitle">4th Year Electrical Engineering Student</h2>
+            </div>
+          </div>
+
+            <div id="textbox" class="parallax earth">
+              <h1 style="font-family: 'Brush Script MT', cursive !important; size:xx-large;">Howdy,</h1>
+              <h2 class="h2">My name is Nusair Islam, I am a 4th year student
+                at the University of British Columbia majoring in Electrical Engineering
+              and minoring in Physics.</h2>
+              <hr class="hr">
+              <p class="p">
+                I have a strong passion for software and electrical engineering, specifically in the fields 
+                of AI, web development, computer architecture, and robotics. I am also very interested in relativity, quantum, and specifically astrophysics. I enjoy learning about all aspects of engineering
+                so that I can build a "full picture" understanding.
+              </p>
+              <br>
+              <p class="p">
+                In my free-time I enjoy biking, bodybuilding, kung fu, and playing/composing guitar pieces.
+                I love learning about new things both related and unrelated to my field of study!
+              </p>
+              <br>
+              <p class="p">
+                I'm so excited to have you on my portfolio! I hope you enjoy exploring my website.<br>
+                Please feel free to contact me and say hi!
+              </p>
+              <br>
+              <p style="font-size:85% !important;color:rgb(138, 138, 138);">
+                  LinkedIn: <a href="https://www.linkedin.com/in/nusair-islam/">https://www.linkedin.com/in/nusair-islam/</a>
+                <br>Email: <a href="mailto:nusair11@gmail.com">nusair11@gmail.com</a>
+                <br>Github: <a href="https://github.com/tawfi11">https://github.com/tawfi11</a>
+            </p>
+            </div>
+      
+            <img id="me" src="../Imgs/me/0.jpg">
+        
+        <nav class="navbar navbar-dark navbar-expand-lg" style="top:0px;position:fixed;width:100%;background-color:black;font-size:12px;z-index:100;">
+            <a class="navbar-brand" href="/" style="font-weight:bold;font-family:Andromeda;color:rgb(196, 196, 196)">NUSAIR ISLAM</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav" style="background:black;width:100vw;">
+                <li class="nav-item" style="text-align:center;">
+                    <a class="nav-link" href="/home" style="font-size:100%;font-family:Brave81;text-align:center;">HOME</a>
+                    </li>
+                    <li class="nav-item" styles="">
+                    <a class="nav-link" href="/about" style="font-size:100%;font-family:Brave81;color:yellow !important;text-align:center;">ABOUT ME</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/education" style="font-size:100%;font-family:Brave81;text-align:center;">EDUCATION</a>
+                    </li>
+                    <li class="nav-item"> 
+                    <a class="nav-link" href="/professional" style="font-size:100%;font-family:Brave81;text-align:center;">PROFESSIONAL EXPERIENCE</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="/projects" style="font-size:100%;font-family:Brave81;text-align:center;">PROJECTS</a>
+                    </li>         
+                </ul>
+            </div>  
+        </nav>
+        <script src="../scripts/mobile/about.js" async defer></script>
+    </body>
+</html>

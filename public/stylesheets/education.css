@@ -45,7 +45,7 @@
 body, html {
     height : 100%;
     background-color : black !important;
-    font-family: 'Courier New', monospace;
+    font-family: 'Courier New', monospace !important;
     overflow: hidden;
 }
 
@@ -162,12 +162,12 @@ hr {
   color :rgb(196, 196, 196);
   text-shadow : 4px 4px black;
   font-weight : bold;
-  font-size : 2vw;
+  font-size : 2.5vw;
 }
 
 #headingSubtitle {
   font-weight : bold !important;
-  font-size : 2vw !important;
+  font-size : 1.5vw !important;
   color : white;
   text-shadow : 2px 2px black;
 }
@@ -181,7 +181,6 @@ hr {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;*/
-  background : transparent !important;
   width : 100vw;
   margin-left: 5vw;
 }

@@ -167,14 +167,13 @@ else {
     $("#twinkling_stars").remove();
     $("#stars").remove();
     $("#stars2").remove();
-
     $("#me_jobh2").css("font-size", "100%");
     //$(".nav-item").css("margin-left","");
     $("#me_textBox").css({"left":"0vw", "top" : "10vh"});
     $("#me_jobh1").remove();
     $("#progress").remove();
     $(".job").css("border-radius", "0")
-    $("#downArrow").remove();
+    $("#downArrowContainer").remove();
     $("#desktopTutorial").remove();
     jobList.forEach(function(job){
         let jobHeight = $(`#${job}_textBox`).offset().top + $(`#${job}_textBox`).outerHeight() - $(`#${job}_job`).offset().top;

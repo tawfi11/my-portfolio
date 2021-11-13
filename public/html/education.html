@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../stylesheets/mobile/education.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <script>
+            if($(window).width() > $(window).height()) {
+                window.location.href = "/education"
+            }
+        </script>
+        <svg id="fader"></svg>
+        <script>
+            fadeInPage();
+            function fadeInPage() {
+                if(!window.AnimationEvent){
+                    return;
+                }
+                let fader = document.getElementById("fader");
+                fader.classList.add('fade-out');
+            }
+        </script>
+        <div class="parallax"></div>
+            <div id="headingBox">
+                <h3 id="headingText">Courses and certificates</h3>
+                <h2 id="headingSubtitle">A collection of class notes I've taken, educational projects I've created,<br>courses I've completed, and certifications I've earned</h2>
+            </div>
+
+        <table id="bigBox" class="parallaxBlur">
+            <tr id="row">
+                <td class="course">
+                    <div class="courseTitle"><h1 class="courseTitleText">The Complete 2022 Web Development Bootcamp</h1></div>
+                    <div class="courseCode"><h2 class="courseCodeText">Udemy</h2></div>
+                    <div class="courseDescription">
+                        <p class="courseDescriptionText">
+                          Comprehensive course covering various full-stack technologies for web development, including: Front-End development, HTML, CSS, Bootstrap, JavaScript,
+                          DOM, jQuery, Bash command Line, Git, Back-End development, Node.JS, NPM, Express.JS, EJS, REST, APIs, Databases, SQL, MongoDB, Mongoose, Authentication,
+                          Firebase, React.JS, React Hooks, Web Design, and Heroku
+                        </p>
+                    </div>
+                    <hr style="border-bottom:1px dashed white;">
+                    <div class="courseSupp">
+                        <a href="https://www.udemy.com/certificate/UC-0da8ce1d-cd19-4510-be45-5d906dbef694/" target="_blank">Official UDEMY issued certificate</a>
+                    </div>
+                  </td>
+            </tr>
+            <tr id="row">
+                <td class="course">
+                    <div class="courseTitle"><h1 class="courseTitleText">System Software Engineering</h1></div>
+                    <div class="courseCode"><h2 class="courseCodeText">CPEN 333, UBC</h2></div>
+                    <div class="courseDescription">
+                        <p class="courseDescriptionText">
+                          Using operating systems abstractions, real-time systems, principles of concurrent and multi-threading programming, information structures, object-orientated analysis,
+                          design and modelling using UML, and software testing
+                        </p>
+                    </div>
+                    <hr style="border-bottom:1px dashed white;">
+                    <div class="courseSupp">
+                        <a href="https://github.com/tawfi11/CPEN333-Lab1" target="_blank">Lab 1, Car Simulator</a><br>
+                        <a href="https://github.com/tawfi11/CPEN333-Lab2" target="_blank">Lab 2, Multithreading PI Calculator and MergeSort<br></a>
+                        <a href="https://github.com/tawfi11/CPEN333-Lab3" target="_blank">Lab 3, Multithreading Shakespeare word counter<br></a>
+                    </div>
+                  </td>
+            </tr>
+            <tr id="row">
+                <td class="course">
+                    <div class="courseTitle"><h1 class="courseTitleText">TensorFlow2 Crash Course</h1></div>
+                    <div class="courseCode"><h2 class="courseCodeText">Free Code Camp</h2></div>
+                    <div class="courseDescription">
+                        <p class="courseDescriptionText">
+                          TensorFloat crash course tutorial. Covers how to use TensorFlow, core learning algorithms, neutral networks with TensorFlow, deep comptuer vision,
+                          convolutional neural networks, natural language processing with RNNs, reinforcement learning with Q-Learning, and OpenCV
+                        </p>
+                    </div>
+                    <hr style="border-bottom:1px dashed white;">
+                    <div class="courseSupp">
+                        <a href="https://colab.research.google.com/drive/1_yzLkJd2NTiB_xJoI_pisJk3_bOu3hz9?usp=sharing" target="_blank">Introduction to TensorFlow</a><br>
+                        <a href="https://colab.research.google.com/drive/1mfs1aH6eST0i1ODUW5fSsNC22qnVAk4K?usp=sharing" target="_blank">Classification</a><br>
+                        <a href="https://colab.research.google.com/drive/1Lfa7UJ2B_KTP-ZoNW_L35j_-zHw8qXR_?usp=sharing" target="_blank">Clustering</a><br>
+                        <a href="https://colab.research.google.com/drive/1ksHKUWywCREDgMgZmaI0ZMQ7IQUhzg0B?usp=sharing" target="_blank">Hidden-Markov Models</a><br>
+                        <a href="https://colab.research.google.com/drive/1uk8SGtwZKbURN_U_nRvro0kLdznWVDfY?usp=sharing" target="_blank">Linear Regression</a><br>
+                        <a href="https://colab.research.google.com/drive/1RS9uqX1F7fwm8Gp6bP-FMq7ULJ05mKuB?usp=sharing" target="_blank">Image Classification with Neural Networks</a><br>
+                        <a href="https://colab.research.google.com/drive/1auN5Uks93ZYXwpIo5enPQkwL6x-uwAku?usp=sharing" target="_blank">Computer Vision with Pre-Trained Models</a><br>
+                        <a href="https://colab.research.google.com/drive/1Y6eVhrtoM2HzY7ZBCeS1Bm-1NaKYXsXh?usp=sharing" target="_blank">Convolutional Neural Network for Computer Vision</a><br>
+                        <a href="https://colab.research.google.com/drive/1nqiZssLH9q4RRV4utsVxsq02Sarg-fCm?usp=sharing" target="_blank">Play Generator (RNN)</a><br>
+                        <a href="https://colab.research.google.com/drive/1nAmXLKYa-yPa06qAxp68MlVziNiq5c4f?usp=sharing" target="_blank">Sentiment Analysis (RNN)</a><br>
+                        <a href="https://colab.research.google.com/drive/1mVf2pzetpyCXwRT7SpeSUB5-Xu5Dx6xM?usp=sharing" target="_blank">Reinforcement Learning</a><br>
+                    </div>
+                  </td>
+            </tr>
+            <tr id="row">
+                <td class="course">
+                    <div class="courseTitle"><h1 class="courseTitleText">Systems and Control</h1></div>
+                    <div class="courseCode"><h2 class="courseCodeText">ELEC 341, UBC</h2></div>
+                    <div class="courseDescription">
+                        <p class="courseDescriptionText">
+                            Continuous time system analysis by Laplace transforms; system modeling by transfer function and state space methods; feedback, stability and 
+                            sensitivity; control design; frequency domain analysis
+                        </p>
+      
+                    </div>
+                    <hr style="border-bottom:1px dashed white;">
+                    <div class="courseSupp">
+                      <a href="https://github.com/tawfi11/Elec341-Assignment1/tree/master/Assignment%201" target="_blank">Assignment 1</a><br>
+                      <a href="https://github.com/tawfi11/Elec341-Assignment1/tree/master/Assignment%202" target="_blank">Assignment 2</a><br>
+                      <a href="https://github.com/tawfi11/Elec341-Assignment1/tree/master/Assignment%203" target="_blank">Assignment 3</a><br>
+                      <a href="https://github.com/tawfi11/Elec341-Assignment1/tree/master/Assignment%204" target="_blank">Assignment 4</a><br>
+                      <a href="https://github.com/tawfi11/Elec341-Assignment1/tree/master/Assignment%205" target="_blank">Assignment 5</a><br>
+                      <a href="https://github.com/tawfi11/Elec341-Assignment1/tree/master/Assignment%206" target="_blank">Assignment 6</a><br>
+                      <a href="https://github.com/tawfi11/Elec341-Assignment1/tree/master/Assignment%207" target="_blank">Assignment 7</a><br>
+                      <a href="https://github.com/tawfi11/Elec341-Assignment1/tree/master/Assignment%209" target="_blank">Assignment 9</a><br>
+                    </div>
+                  </td>
+            </tr>
+            <tr id="row">
+                <td class="course">
+                    <div class="courseTitle"><h1 class="courseTitleText">Electromagnetic Fields and Waves</h1></div>
+                    <div class="courseCode"><h2 class="courseCodeText">ELEC 311, UBC</h2></div>
+                    <div class="courseDescription">
+                        <p class="courseDescriptionText">
+                          Waves and propagation; Maxwell’s equations; applications including transmission lines; impedance matching and Smith charts; reflection and 
+                          refraction; waveguides and antennas
+                        </p>
+      
+                    </div>
+                    <hr style="border-bottom:1px dashed white;">
+                    <div class="courseSupp">
+                      <a href="https://github.com/tawfi11/Elec311/blob/master/Notebook%200%20-%20Introduction%20to%20Python%20and%20Jupyter%20Notebook%20(1).ipynb" target="_blank">Notebook 0 - Intro to Jupyter Notebook</a><br>
+                      <a href="https://github.com/tawfi11/Elec311/blob/master/Notebook%201%20-%20Travelling%20Waves%20-%20v2.ipynb" target="_blank">Notebook 1 - Travelling Waves</a><br>
+                      <a href="https://github.com/tawfi11/Elec311/blob/master/Notebook%202%20-%20Reflection%20and%20Standing%20Waves.ipynb" target="_blank">Notebook 2 - Reflection and Standing Waves</a><br>
+                      <a href="https://github.com/tawfi11/Elec311/blob/master/Notebook%203%20-%20Smith%20Chart%20Widget.ipynb" target="_blank">Notebook 3 - Smith Chart</a><br>
+                      <a href="https://github.com/tawfi11/Elec311/blob/master/Notebook%204%20-%20Plane%20Waves.ipynb" target="_blank">Notebook 4 - Plane Waves</a><br>
+                      <a href="https://github.com/tawfi11/Elec311/blob/master/Notebook%205%20-%20Wave%20Polarization.ipynb" target="_blank">Notebook 5 - Wave Polarization</a><br>
+                    </div>
+                  </td>
+            </tr>
+            <tr id="row">
+                <td class="course">
+                    <div class="courseTitle"><h1 class="courseTitleText">Electronic Circuits</h1></div>
+                    <div class="courseCode"><h2 class="courseCodeText">ELEC 301, UBC</h2></div>
+                    <div class="courseDescription">
+                        <p class="courseDescriptionText">
+                          Analysis and design of electronic circuits, biasing of and small--signal models for transistors, frequency response of amplifiers, feedback and stability
+                          aspects of amplifier design, OP-AMPS, active filters, oscillators, IC specification, and selection
+                        </p>
+                    </div>
+                    <hr style="border-bottom:1px dashed white;">
+                    <div class="courseSupp">
+                        <a href="MP1.pdf" target="_blank">Mini Project 1</a><br>
+                        <a href="MP2.pdf" target="_blank">Mini Project 2</a><br>
+                        <a href="MP3.pdf" target="_blank">Mini Project 3</a><br>
+                        <a href="MP4.pdf" target="_blank">Mini Project 4</a><br>
+                    </div>
+                  </td>
+            </tr>
+            <tr id="row">
+                <td class="course">
+                    <div class="courseTitle"><h1 class="courseTitleText">Electronic Materials and Devices</h1></div>
+                    <div class="courseCode"><h2 class="courseCodeText">ELEC 315, UBC</h2></div>
+                    <div class="courseDescription">
+                        <p class="courseDescriptionText">
+                          Fundamental aspects of electronic materials such as: semiconductors, metals, dielectrics, piezoelectrics, magnetic materials, and their 
+                          applications in devices such as diodes, transistors, and transducers
+                        </p>
+      
+                    </div>
+                    <hr style="border-bottom:1px dashed white;">
+                    <div class="courseSupp">
+                    </div>
+                    </td>
+            </tr>
+            <tr id="row">
+                <td class="course">
+                    <div class="courseTitle"><h1 class="courseTitleText">Electrical Engineering Design Studio</h1></div>
+                    <div class="courseCode"><h2 class="courseCodeText">ELEC 291, UBC</h2></div>
+                    <div class="courseDescription">
+                        <p class="courseDescriptionText">
+                          Design projects involving electronic devices and circuits, electromagnetics, signals and systems, and microcomputers
+                        </p>
+      
+                    </div>
+                    <hr style="border-bottom:1px dashed white;">
+                    <div class="courseSupp">
+                      <a href="https://github.com/tawfi11/Elec291/tree/master/Blinky" target="_blank">Blinky Circuit</a><br>
+                      <a href="https://github.com/tawfi11/Elec291/tree/master/Flirting" target="_blank">Flirty Circuit</a><br>
+                      <a href="https://github.com/tawfi11/Elec291/tree/master/Hello" target="_blank">Hello Circuit</a><br>
+                      <a href="https://github.com/tawfi11/Elec291/tree/master/ISR" target="_blank">Interrupt Service Routine</a><br>
+                      <a href="https://github.com/tawfi11/Elec291/tree/master/Metal%20Detector" target="_blank">Metal Detector Circuit</a><br>
+                      <a href="https://github.com/tawfi11/Elec291/tree/master/Motor" target="_blank">Motor Controller Circuit</a><br>
+                      <a href="https://github.com/tawfi11/Elec291/tree/master/Oscilloscope" target="_blank">Virtual Oscilloscope</a><br>
+                      <a href="https://github.com/tawfi11/Elec291/tree/master/Phasor" target="_blank">Phasor</a><br>
+                      <a href="https://github.com/tawfi11/Elec291/tree/master/Temperature" target="_blank">Temperature Sensor</a><br>
+                    </div>
+                  </td>
+            </tr>
+            <tr id="row">
+                <td class="course">
+                    <div class="courseTitle"><h1 class="courseTitleText">Introduction to Microcomputers</h1></div>
+                    <div class="courseCode"><h2 class="courseCodeText">CPEN 211, UBC</h2></div>
+                    <div class="courseDescription">
+                        <p class="courseDescriptionText">
+                          Boolean algebra; combinational and sequential circuits; organization and operation of microcomputers, memory addressing modes, 
+                          representation of information, instruction sets, machine and assembly language programming, systems programs, I/O structures, 
+                          I/O interfacing and I/O programming, introduction to digital system design using microcomputers
+                        </p>
+      
+                    </div>
+                    <hr style="border-bottom:1px dashed white;">
+                    <div class="courseSupp">
+                      <a href="https://github.com/tawfi11/Cpen211/tree/master/Lab1" target="_blank">Lab 1</a><br>
+                      <a href="https://github.com/tawfi11/Cpen211/tree/master/Lab3" target="_blank">Lab 3</a><br>
+                      <a href="https://github.com/tawfi11/Cpen211/tree/master/Lab4" target="_blank">Lab 4</a><br>
+                      <a href="https://github.com/tawfi11/Cpen211/tree/master/Lab5" target="_blank">Lab 5</a><br>
+                      <a href="https://github.com/tawfi11/Cpen211/tree/master/Lab6" target="_blank">Lab 6</a><br>
+                      <a href="https://github.com/tawfi11/Cpen211/tree/master/Lab7" target="_blank">Lab 7</a><br>
+                      <a href="https://github.com/tawfi11/Cpen211/tree/master/Lab8" target="_blank">Lab 8</a><br>
+                      <a href="https://github.com/tawfi11/Cpen211/tree/master/Lab9" target="_blank">Lab 9</a><br>
+                      <a href="https://github.com/tawfi11/Cpen211/tree/master/Lab10" target="_blank">Lab 10</a><br>
+                      <a href="https://github.com/tawfi11/Cpen211/tree/master/Lab11" target="_blank">Lab 11</a><br>
+                      <a href="https://github.com/tawfi11/Cpen211/tree/master/Lab%20test%201" target="_blank">Lab Test 1</a><br>
+                      <a href="https://github.com/tawfi11/Cpen211/tree/master/Lab%20test%202" target="_blank">Lab Test 2</a><br>
+                      <a href="https://github.com/tawfi11/Cpen211/tree/master/Lab%20test%203" target="_blank">Lab Test 3</a><br>
+                      <a href="https://github.com/tawfi11/Cpen211/tree/master/Lab%20test%204" target="_blank">Lab Test 4</a><br>
+                    </div>
+                  </td>
+            </tr>
+        </table>
+
+
+        <nav class="navbar navbar-dark navbar-expand-lg" style="top:0px;position:fixed;width:100%;background-color:black;font-size:12px;z-index:100;">
+            <a class="navbar-brand" href="/" style="font-weight:bold;font-family:Andromeda;color:rgb(196, 196, 196)">NUSAIR ISLAM</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav" style="background:black;width:100vw;">
+                <li class="nav-item" style="text-align:center;">
+                    <a class="nav-link" href="/home" style="font-size:100%;font-family:Brave81;text-align:center;">HOME</a>
+                    </li>
+                    <li class="nav-item" styles="">
+                    <a class="nav-link" href="/about" style="font-size:100%;font-family:Brave81;text-align:center;">ABOUT ME</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/education" style="font-size:100%;font-family:Brave81;text-align:center;color:yellow !important;">EDUCATION</a>
+                    </li>
+                    <li class="nav-item"> 
+                    <a class="nav-link" href="/professional" style="font-size:100%;font-family:Brave81;text-align:center;">PROFESSIONAL EXPERIENCE</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="/projects" style="font-size:100%;font-family:Brave81;text-align:center;">PROJECTS</a>
+                    </li>         
+                </ul>
+            </div>  
+        </nav>
+        <script src="" async defer></script>
+    </body>
+</html>

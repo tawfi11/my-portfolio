@@ -20,6 +20,11 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
     <body>
+      <script>
+        if($(window).width() < $(window).height()){
+          window.location = "html/education.html";
+        }
+      </script>
         <svg id="fader"></svg>
         <script>
             fadeInPage();
@@ -31,7 +36,7 @@
                 fader.classList.add('fade-out');
             }
         </script>
-  
+
         <div class="parallax"></div>
         <div id="downArrowContainer">
           <h3 style="font-weight:bold;">scroll</h3>

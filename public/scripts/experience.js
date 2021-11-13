@@ -37,7 +37,7 @@ function switchJob(oldIndex, i){
      let interval = setInterval(function(){
         let current = $(`#${jobList[i]}_job`), old = $(`#${jobList[oldIndex]}_job`);
         let speed = 4 * parseFloat(current.css("top")) / oldPos;
-        speed = 4
+        speed = 10
         current.css("top", parseInt(current.css("top")) + (direction * speed));
         old.css("top", parseInt(old.css("top")) + (direction * speed));
         if((parseFloat(current.css("top")) <= $(window).height() / 4 && direction == -1) || ((parseFloat(current.css("top")) >= $(window).height() / 4 && direction == 1))){
@@ -60,7 +60,7 @@ window.mobileAndTabletCheck = function() {
     return check;
   };
   
-if(!mobileAndTabletCheck){
+if($(window).height() < $(window).width()){
     $("html").css("overflow", "hidden");
     $(".job").css({"display" : "none", "top" : "25vh", "position" : "absolute"});
     $(".parallaxHalf").remove();
@@ -169,6 +169,7 @@ if(!mobileAndTabletCheck){
     })
 }
 else {
+    $(".nav-link").css("font-size", "2vh");
     $("#twinkling_stars").remove();
     $("#stars").remove();
     $("#stars2").remove();

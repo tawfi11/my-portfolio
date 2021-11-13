@@ -222,4 +222,7 @@ hr {
 
 .courseSupp {
   font-weight : bold;
+  z-index:100;
 }
+
+a {z-index:200;}

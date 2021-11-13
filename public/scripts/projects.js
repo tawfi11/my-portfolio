@@ -1,5 +1,5 @@
 if($(window).height() < $(window).width()){
-    let speed = 5;
+    let speed = 10;
     function switchRow(index, oldIndex) {
         if(index === -1 ){
             $("#headerBox").css("display", "initial");

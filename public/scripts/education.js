@@ -20,6 +20,9 @@ if($(window).width() > $(window).height()){
                         opacity = ((1-0.05) / ($(window).height() - $(window).height() / 4) * parseFloat($("#bigBox").css("top"))) + (0.09 - 0.95 / 3);
                         $("#downArrowContainer").css("opacity",opacity);
                     }
+                    if(parseFloat($("#bigBox").css("top")) >= $(window).height() * 3 /4){
+                        $("#headingBox").css("display", "initial");
+                    }
                     $(".parallax").animate({opacity: opacity}, 0)
                     $("#headingBox").css("opacity", $(".parallax").css("opacity"));
                     //checkScroll = false;
@@ -37,6 +40,7 @@ if($(window).width() > $(window).height()){
                         else if (parseFloat($("#bigBox").css("top")) <= $(window).height() / 4){
                             opacity = 0.05;
                             $("#downArrowContainer").css("opacity",0);
+                            $("#headingBox").css("display", "none");
                         }
                         else {
                             opacity = ((1-0.05) / ($(window).height() - $(window).height() / 4) * parseFloat($("#bigBox").css("top"))) + (0.09 - 0.95 / 3);

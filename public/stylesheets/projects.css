@@ -175,42 +175,42 @@ box-shadow : 0px 0px 5px 3px black;
 }
 
 #linkedinBtn {
-width : 2vw;
-background:rgb(196, 196, 196);
--webkit-transition: all 0.3s ease-in-out;
-transition: all 0.3s ease-in-out;
-}
-
-#linkedinBtn:hover{
-background-color:rgb(10,102,194);
-}
-
-#email {
-width : 1.7vw;
-background-color : rgb(196, 196, 196);
-border-radius: 5px;
--webkit-transition: all 0.3s ease-in-out;
-transition: all 0.3s ease-in-out;
-margin : 0.5vw;
-}
-
-#email:hover {
-background-color:#C5221E;
-cursor : pointer;
-}
-
-#gitBtn {
-width : 1.8vw;
-background:rgb(196, 196, 196);
--webkit-transition: all 0.3s ease-in-out;
-transition: all 0.3s ease-in-out;
-border-radius : 5px;
-margin-left : 0.3vw;
-}
-
-#gitBtn:hover {
-background-color: purple;
-}
+        width : 35px;
+        background:rgb(196, 196, 196);
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      #linkedinBtn:hover{
+        background-color:rgb(10,102,194);
+      }
+      
+      #email {
+        width : 35px;
+        background-color : rgb(196, 196, 196);
+        border-radius: 5px;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        margin : 10px;
+      }
+      
+      #email:hover {
+        background-color:#C5221E;
+        cursor : pointer;
+      }
+      
+      #gitBtn {
+        width : 35px;
+        background:rgb(196, 196, 196);
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        border-radius : 5px;
+        margin-left : 5px;
+      }
+      
+      #gitBtn:hover {
+        background-color: purple;
+      }
 
 #fader {
 position : fixed;

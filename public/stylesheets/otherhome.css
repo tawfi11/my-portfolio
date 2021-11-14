@@ -2045,7 +2045,7 @@ body {
 }
 
 #linkedinBtn {
-  width : 2vw;
+  width : 35px;
   background:rgb(196, 196, 196);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -2056,12 +2056,12 @@ body {
 }
 
 #email {
-  width : 1.7vw;
+  width : 35px;
   background-color : rgb(196, 196, 196);
   border-radius: 5px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  margin : 0.5vw;
+  margin : 10px;
 }
 
 #email:hover {
@@ -2070,12 +2070,12 @@ body {
 }
 
 #gitBtn {
-  width : 1.8vw;
+  width : 35px;
   background:rgb(196, 196, 196);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border-radius : 5px;
-  margin-left : 0.3vw;
+  margin-left : 5px;
 }
 
 #gitBtn:hover {

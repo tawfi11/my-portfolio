@@ -17,13 +17,25 @@
   z-index: 999999;
   pointer-events: none;
   background: black;
-  animation-duration: 4000ms;
-  animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 4000ms;
+          animation-duration: 4000ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes fade-out {
+  from { opacity: 1 }
+      to { opacity: 0 }
 }
 
 @keyframes fade-out {
   from { opacity: 1 }
       to { opacity: 0 }
+}
+
+@-webkit-keyframes fade-in {
+  from { opacity: 0 }
+      to { opacity: 1 }
 }
 
 @keyframes fade-in {
@@ -33,12 +45,14 @@
 
 #fader.fade-out {
   opacity: 0;
-  animation-name: fade-out;
+  -webkit-animation-name: fade-out;
+          animation-name: fade-out;
 }
 
 #fader.fade-in {
   opacity: 1;
-  animation-name: fade-in;
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
 }
 
 
@@ -58,9 +72,6 @@ hr {
   width : 2vw;
   background:rgb(196, 196, 196);
   -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -72,9 +83,6 @@ hr {
   width : 1.8vw;
   background:rgb(196, 196, 196);
   -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border-radius : 5px;
   margin-left : 0.3vw;
@@ -89,9 +97,6 @@ hr {
   background-color : rgb(196, 196, 196);
   border-radius: 5px;
   -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   margin : 0.5vw;
 }

@@ -1,132 +1,146 @@
 html, body {
-    width : 100%;
-    background : black;
+  width : 100%;
+  background : black;
 }
 
 @font-face {
-    font-family: 'Andromeda';
-    src: url('../../Fonts/Andromeda-eR2n.ttf')  format('truetype'); /* Safari, Android, iOS */
-  }
-  
-  @font-face {
-    font-family: "Brave81";
-    src: url('../../Fonts/Outerorbit-rggRL.ttf') format('truetype'); /* Safari, Android, iOS*/
-  }
+  font-family: 'Andromeda';
+  src: url('../../Fonts/Andromeda-eR2n.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
 
-  .parallax {
-    background-image: url("../../Imgs/planets/saturnMobile.jpg");
-    /* Full height */
-    height: 100vh;
-    width : 100vw;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+@font-face {
+  font-family: "Brave81";
+  src: url('../../Fonts/Outerorbit-rggRL.ttf') format('truetype'); /* Safari, Android, iOS*/
+}
+
+.parallax {
+  background-image: url("../../Imgs/planets/saturnMobile.jpg");
+  /* Full height */
+  height: 100vh;
+  width : 100vw;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #headerBox {
-    width : 100vw;
+  width : 100vw;
+  position : absolute;
+  top : 20vh;
+  text-align: center;
+}
+
+#headerText {
+  font-family : Brave81;
+  color :rgb(196, 196, 196);
+  text-shadow : 4px 4px black;
+  font-weight : bold;
+  font-size : 3vh;
+}
+
+#headerSubtitle {
+  font-family: 'Courier New', monospace !important;
+  color : white;
+  font-weight : bold;
+  font-size : 2vh;
+}
+
+#bigBox {
     position : absolute;
-    top : 20vh;
-    text-align: center;
-  }
-  
-  #headerText {
-    font-family : Brave81;
-    color :rgb(196, 196, 196);
-    text-shadow : 4px 4px black;
-    font-weight : bold;
-    font-size : 3vh;
-  }
-  
-  #headerSubtitle {
-    font-family: 'Courier New', monospace !important;
-    color : white;
-    font-weight : bold;
-    font-size : 2vh;
-  }
+    top : 80vh;
+}
 
-  #bigBox {
-      position : absolute;
-      top : 80vh;
-  }
+.project {
+  width : 96vw;
+  background-color:rgb(26, 36, 63);
+  opacity : 0.9;
+  margin : 2vw;
+  float : left;
+  border: 3px solid #8A8A8A;
+  border-radius:20px;
+  padding : 20px;
+  box-shadow : 5px 5px 15px 15px black;
+}
 
-  .project {
-    width : 96vw;
-    background-color:rgb(26, 36, 63);
-    opacity : 0.9;
-    margin : 2vw;
-    float : left;
-    border: 3px solid #8A8A8A;
-    border-radius:20px;
-    padding : 20px;
-    box-shadow : 5px 5px 15px 15px black;
-  }
+h1.projectDesc {
+  font-size : 3vh;
+  font-family: 'Courier New', monospace; 
+  font-weight : bold;
+  color: white;
+}
 
-  h1.projectDesc {
-    font-size : 3vh;
-    font-family: 'Courier New', monospace; 
-    font-weight : bold;
-    color: white;
-  }
-  
-  h2.projectDesc {
-    font-size: 2vh;
-    font-family: 'Courier New', monospace; 
-    color: rgb(196, 196, 196);
-  }
-  
-  h3.projectDesc {
-    font-family: 'Courier New', monospace;
-    font-size:2vh;
-    color : rgb(196, 196, 196);
-  }
-  
-  p.projectDesc {
-    color: white;
-    font-size : 2.5vh;
-    font-weight : bold;
-  }
-  
-  .media {
-    height:35%;
-    max-width : 100%;
-    text-align : center;
-    margin : auto;
-    box-shadow : 0px 0px 5px 3px black;
-  }
+h2.projectDesc {
+  font-size: 2vh;
+  font-family: 'Courier New', monospace; 
+  color: rgb(196, 196, 196);
+}
+
+h3.projectDesc {
+  font-family: 'Courier New', monospace;
+  font-size:2vh;
+  color : rgb(196, 196, 196);
+}
+
+p.projectDesc {
+  color: white;
+  font-size : 2.5vh;
+  font-weight : bold;
+}
+
+.media {
+  height:35%;
+  max-width : 100%;
+  text-align : center;
+  margin : auto;
+  box-shadow : 0px 0px 5px 3px black;
+}
 
 
-  #fader {
-    position : fixed;
-    top : 0;
-    left: 0;
-    width: 100vw;
-    height : 100vh;
-    z-index: 999999;
-    pointer-events: none;
-    background: black;
-    animation-duration: 4000ms;
-    animation-timing-function: ease-in-out;
-  }
-  
-  @keyframes fade-out {
-    from { opacity: 1 }
-        to { opacity: 0 }
-  }
-  
-  @keyframes fade-in {
-    from { opacity: 0 }
-        to { opacity: 1 }
-  }
-  
-  #fader.fade-out {
-    opacity: 0;
-    animation-name: fade-out;
-  }
-  
-  #fader.fade-in {
-    opacity: 1;
-    animation-name: fade-in;
-  }
+#fader {
+  position : fixed;
+  top : 0;
+  left: 0;
+  width: 100vw;
+  height : 100vh;
+  z-index: 999999;
+  pointer-events: none;
+  background: black;
+  -webkit-animation-duration: 4000ms;
+          animation-duration: 4000ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes fade-out {
+  from { opacity: 1 }
+      to { opacity: 0 }
+}
+
+@keyframes fade-out {
+  from { opacity: 1 }
+      to { opacity: 0 }
+}
+
+@-webkit-keyframes fade-in {
+  from { opacity: 0 }
+      to { opacity: 1 }
+}
+
+@keyframes fade-in {
+  from { opacity: 0 }
+      to { opacity: 1 }
+}
+
+#fader.fade-out {
+  opacity: 0;
+  -webkit-animation-name: fade-out;
+          animation-name: fade-out;
+}
+
+#fader.fade-in {
+  opacity: 1;
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+}

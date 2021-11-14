@@ -136,7 +136,8 @@
             /* Get the text field */
             let copyText = "nusair11@gmail.com";
           
-            navigator.clipboard.writeText(copyText);
+            const cb = navigator.clipboard;
+            cb.writeText(copyText);
             $("#copyBox").fadeIn(100);
             setTimeout(function(){
               $("#copyBox").fadeOut(1000);

@@ -60,5 +60,64 @@ if($(window).width() > $(window).height()){
         }
 
     });
+    document.onkeydown = function(e) {
+        if(checkScroll){
+            switch(e.which) {
+                case 40: // down
+                    if(parseInt($("#bigBox").css("bottom")) < 0) {
+                        $("#bigBox").animate({top: `-=${scrollSpeed}vh`}, 0)
+                        if(parseFloat($(".parallax").css("opacity")) > 0.05){
+                            let opacity = 1;
+                            if(parseFloat($("#bigBox").css("top")) >= $(window).height()){
+                                opacity = 1;
+                            }
+                            else if (parseFloat($("#bigBox").css("top")) <= $(window).height() / 4){
+                                opacity = 0.05;
+                                $("#downArrowContainer").css("opacity",0);
+                                $("#headingBox").css("display", "none");
+                            }
+                            else {
+                                opacity = ((1-0.05) / ($(window).height() - $(window).height() / 4) * parseFloat($("#bigBox").css("top"))) + (0.09 - 0.95 / 3);
+                                $("#downArrowContainer").css("opacity",opacity);
+                            }
+                            $(".parallax").animate({opacity: opacity}, 0)
+                            $("#headingBox").css("opacity", $(".parallax").css("opacity"));
+                            
+                        }
+                        //checkScroll = false;
+                    }
+                    else {
+                        $(".headingBox").css("opacity", 0);
+                        $("#downArrowContainer").css("opacity", 0);
+                    }
+                break;
+                case 38: // up
+                    if(parseInt($("#bigBox").css("top")) < $(window).height()){
+                        $("#bigBox").animate({top: `+=${scrollSpeed}vh`}, 0)
+                        let opacity = 1;
+                        if(parseFloat($("#bigBox").css("top")) >= $(window).height()){
+                            opacity = 1;
+                            $("#downArrowContainer").css("opacity",1);
+                        }
+                        else if (parseFloat($("#bigBox").css("top")) <= $(window).height() / 4){
+                            opacity = 0.05;
+                        }
+                        else {
+                            opacity = ((1-0.05) / ($(window).height() - $(window).height() / 4) * parseFloat($("#bigBox").css("top"))) + (0.09 - 0.95 / 3);
+                            $("#downArrowContainer").css("opacity",opacity);
+                        }
+                        if(parseFloat($("#bigBox").css("top")) >= $(window).height() * 3 /4){
+                            $("#headingBox").css("display", "initial");
+                        }
+                        $(".parallax").animate({opacity: opacity}, 0)
+                        $("#headingBox").css("opacity", $(".parallax").css("opacity"));
+                        //checkScroll = false;
+                    }
+                break;
+                default: return; // exit this handler for other keys
+            }
+            e.preventDefault(); // prevent the default action (scroll / move caret)
+        }
+    };
     setInterval(function(){checkScroll = true;},0.00001);
 }

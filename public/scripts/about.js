@@ -112,5 +112,36 @@ else {
         }
 
     });
+
+    document.onkeydown = function(e) {
+        if(checkScroll){
+            let oldIndex = i;
+            switch(e.which) {
+                case 40: // down
+                    if(parseInt($(".container").css("top")) > 0){
+                        if(parseFloat($(".earth").css("opacity")) > 0.05){
+                            $(".earth").animate({opacity: `-=${opacitySpeed}`}, 0)
+                        }
+                        //checkScroll = false;
+                        $(".container").animate({top: `-=${scrollSpeed}vh`}, 0)
+                    }
+                    else {
+                        $(".aboutMeHeadingContainer").css("opacity", 0);
+                        $("#downArrowContainer").css("opacity", 0);
+                    }
+                break;
+                case 38: // up
+                    if(parseInt($(".container").css("top")) < $(window).height()){
+                        $(".earth").animate({opacity: `+=${opacitySpeed}`}, 0)
+                        $(".container").animate({top: `+=${scrollSpeed}vh`}, 0)
+                        $(".aboutMeHeadingContainer").css("opacity", $(".earth").css("opacity"));
+                        $("#downArrowContainer").css("opacity", $(".earth").css("opacity"));
+                    }
+                break;
+                default: return; // exit this handler for other keys
+            }
+            e.preventDefault(); // prevent the default action (scroll / move caret)
+        }
+    };
     setInterval(function(){checkScroll = true;},0.00001);
 }

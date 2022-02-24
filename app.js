@@ -1,5 +1,5 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+//const bodyParser = require('body-parser');
 const app = express();
 
 app.use(express.static("public"));
@@ -9,8 +9,11 @@ app.get('/', function(req, res){
     res.render("landing", {});
 })
 
-app.get('/home', function(req,res){
+/*app.get('/home', function(req,res){
     res.render('otherhome', {});
+})*/
+app.get('/home', function(req,res){
+    res.render('index', {});
 })
 
 app.get('/professional', function(req,res){
